@@ -1,5 +1,6 @@
 @import "~bootstrap/scss/bootstrap";
 @import "./index.scss";
+@import "./components/footer.scss";
 
 $navy: #002642;
 $yellow: #E59500;
@@ -131,8 +132,57 @@ a:hover {
   top: 0;
   left: 0;
   background: $yellow;
- }
+  }
  .btn:hover:after,
  .btn:active:after {
   height: 100%;
- }
+}
+
+.btn-secondary {
+  background: transparent;
+  border: 2px solid;
+  border-radius: 0;
+  color: $navy;
+  font-family: 'Aleo', sans-serif, Arial;
+  font-weight: bold;
+  margin-top: 2rem;
+  padding: .85rem 2rem;
+
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  transition: all 0.4s;
+
+  overflow: hidden;
+  position: relative;
+}
+
+.btn-secondary:hover {
+  background-color: $navy;
+  border: 2px solid $navy;
+  border-radius: 0;
+  color: $yellow;
+} 
+
+.btn-secondary:after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  transition: all 0.4s;
+  width: 100%;
+  height: 0;
+  top: 0;
+  left: 0;
+  background: $navy;
+  }
+ .btn-secondary:hover:after,
+ .btn-secondary:active:after {
+  height: 100%;
+}
+
+.btn-secondary-outline {
+  background-color: transparent;
+  border: 2px solid $navy;
+  border: 2px solid $navy;
+}
