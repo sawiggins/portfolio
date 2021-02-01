@@ -23,20 +23,70 @@ h2 {
 
 p {
   color: $white;
-  line-height: 1.75;
+  line-height: 2;
 }
 
 img {
   max-width: 100%
 }
 
+.nav-link {
+  font-family: 'Aleo', sans-serif, Arial;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+$underlineColor: $yellow;
+$underlineHeight: 5%;
+
+// animation from: https://codepen.io/MishaHahaha/pen/AXxYKQ
 a {
+  position: relative;
+  text-decoration: none;
+  display: inline-block;
   color: $yellow;
-  text-decoration: underline;
+  padding: 0 1px;
+  transition: color ease 0.3s;
+  
+  &::before, &::after {
+    content: '';
+    position: absolute;
+    background-color: $underlineColor;
+    z-index: -1;
+    height: $underlineHeight;
+  }
+  
+  &::before {
+    width: 0%;
+    left: 0;
+    bottom: 0;
+    transition: width ease 0.4s;
+  }
+  
+  &::after {
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    transition: all ease 0.6s;
+  }
+  
+  &:hover {
+
+    &::before {
+      width: 100%;
+    }
+    
+    &::after {
+      left: 100%;
+      width: 0%;
+      transition: all ease 0.2s;
+    }
+  }
 }
 
 a:hover {
-  color: darken($yellow, 10%);
+  color: $yellow;
+  text-decoration: none;
 }
 
 .section {
