@@ -1,5 +1,7 @@
-import * as React from "react"
+import React from "react"
 import { Button, Col, Container, Image, Nav, Navbar, Row } from "react-bootstrap"
+import { Link } from "gatsby"
+
 import Icon from '../images/icon.png'
 import ImgStephanie from '../images/thumbnail_stephanie-wiggins-full.png'
 import ImgStephanieDecorated from '../images/swiggins-decorated.png'
@@ -74,7 +76,7 @@ const IndexPage = () => {
                 Specifically, I focus on the Genomics Platform app, a ReactJS/Ruby on Rails site 
                 that shares raw genomics data and analysis tools with scientists globally.
               </p>
-              <Button>Learn More</Button>
+              <Button as={Link} to='portfolio/stjude-cloud'>Learn More</Button>
             </Col>
           </Row>
           <Row className="my-5">
@@ -86,7 +88,7 @@ const IndexPage = () => {
                 These marketing efforts spanned the content marketing process from initial research 
                 and content creation to distribution and post-production analysis.
               </p>
-              <Button>Learn More</Button>
+              <Button as={Link} to='portfolio/mercer-capital'>Learn More</Button>
             </Col>
             <Col md={6}>
               <img src={Icon} alt="" />
@@ -96,17 +98,17 @@ const IndexPage = () => {
             <Col md={4}>
               <img src={Icon} alt="" />
               <h3>Homer<br />Real Estate</h3>
-              <Button>Learn More</Button>
+              <Button as={Link} to='portfolio/homer-real-estate'>Learn More</Button>
             </Col>
             <Col md={4}>
               <img src={Icon} alt="" />
               <h3>Mid-South Culinary Alliance</h3>
-              <Button>Learn More</Button>
+              <Button as={Link} to='portfolio/mid-south-culinary-alliance'>Learn More</Button>
             </Col>
             <Col md={4}>
               <img src={Icon} alt="" />
               <h3>Mercy Hill <br /> Church</h3>
-              <Button>Learn More</Button>
+              <Button as={Link} to='portfolio/mercy-hill-church'>Learn More</Button>
             </Col>
           </Row>
         </Container>
