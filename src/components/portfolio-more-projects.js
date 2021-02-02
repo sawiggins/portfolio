@@ -6,8 +6,8 @@ const PortfolioMoreProjects = () => {
   return (
     <Container className="section portfolio__more-projects">
       <Row className='justify-content-center row__more-projects'>
-          <div  class="projects-box">
-            <Link to='/#porfolio'>
+          <div  className="projects-box">
+            <Link to='/#porfolio' className='link-animate'>
               <h1 className="text-center">View More Projects</h1>
             </Link>
           </div>

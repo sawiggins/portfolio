@@ -20,12 +20,6 @@ $yellow: #E59500;
     margin-left: 2rem;
   }
 
-  .svg-inline--fa {
-    font-size: 1.25rem;
-    height: 1.25em;
-    vertical-align: middle;
-  }
-
   @include media-breakpoint-up(md) {
     h2 {
       margin: 0;

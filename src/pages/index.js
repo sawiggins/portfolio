@@ -1,8 +1,10 @@
 import React from "react"
 import { Button, Col, Container, Image, Nav, Navbar, Row } from "react-bootstrap"
 import { Link } from "gatsby"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { fab, faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
 
-import ImgStephanie from '../images/thumbnail_stephanie-wiggins-full.png'
 import ImgStephanieDecorated from '../images/swiggins-decorated.png'
 import Trees from '../images/trees.png'
 import GetInTouch from '../images/get-in-touch.png'
@@ -12,6 +14,12 @@ import MercerNewsletters from '../images/mercer_newsletters.png'
 import HomerSign from '../images/homer_yard-sign-home.png'
 import MSCAWebsite from '../images/msca_website-homepage.png'
 import MercyHillBanner from '../images/mercy-hill_banner-homepage.png'
+
+library.add(
+  fab,
+  faLinkedin,
+  faGithub
+);
 
 const IndexPage = () => {
   return (
@@ -42,10 +50,10 @@ const IndexPage = () => {
         </Container>
 
         <a name="about" />
-        <Container className="section">
+        <Container className="section about-me">
           <Row >
             <Col md={6}>
-              <img src={Trees} alt="" />
+              <img src={Trees} alt="trees" />
             </Col>
             <Col md={6}>
               <h2>Analytics yet Creative.</h2>
@@ -77,7 +85,7 @@ const IndexPage = () => {
             <Col>
               <h3>St. Jude Cloud</h3>
               <p>
-                I am a UI/UX designer and developer for the St. Jude Cloud site, <a href="stjude.cloud">stjude.cloud</a>. 
+                I am a UI/UX designer and developer for the St. Jude Cloud site, <a href="https://stjude.cloud" target="_blank" rel="noopener noreferrer">stjude.cloud</a>. 
                 Specifically, I focus on the Genomics Platform app, a ReactJS/Ruby on Rails site 
                 that shares raw genomics data and analysis tools with scientists globally.
               </p>
@@ -124,10 +132,39 @@ const IndexPage = () => {
             <Col md={6}>
               <img src={GetInTouch} alt="contact me cup of coffee" />
             </Col>
-            <Col>
+            <Col md={5} lg={4} className="get-in-touch">
+              <div className="d-flex flex-column align-items-start">
               <h2>Get in Touch.</h2>
-              <Button>Learn More</Button>
-              <span>social</span> <span>social</span>
+              <Button className="btn_email" href="mailto:stephawiggins@gmail.com">
+              Email Me
+            </Button>
+            </div>
+            <div className="mt-3">
+            <Button
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://www.linkedin.com/in/wigginsstephanie/"
+                title="LinkedIn"
+                alt="LinkedIn"
+                className="btn_brand mr-2 py-3"
+              >
+                <FontAwesomeIcon
+                  icon={["fab", "linkedin-in"]}
+                />
+              </Button>
+              <Button 
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://github.com/sawiggins"
+                title="GitHub"
+                alt="GitHub"
+                className="btn_brand py-3"
+              >
+                <FontAwesomeIcon
+                  icon={["fab", "github"]}
+                />
+              </Button>
+              </div>
             </Col>
           </Row>
         </Container>

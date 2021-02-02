@@ -41,14 +41,24 @@ img {
 $underlineColor: $yellow;
 $underlineHeight: 5%;
 
-// animation from: https://codepen.io/MishaHahaha/pen/AXxYKQ
 a {
+  color: $yellow;
+}
+
+.svg-inline--fa {
+  font-size: 1.25rem;
+  height: 1.25em;
+  vertical-align: middle;
+}
+
+// animation from: https://codepen.io/MishaHahaha/pen/AXxYKQ
+.link-animate {
   position: relative;
   text-decoration: none;
   display: inline-block;
   color: $yellow;
   padding: 0 1px;
-  transition: color ease 0.3s;
+  transition: color ease 0.4s;
   
   &::before, &::after {
     content: '';
@@ -62,14 +72,14 @@ a {
     width: 0%;
     left: 0;
     bottom: 0;
-    transition: width ease 0.4s;
+    transition: width ease 0.5s;
   }
   
   &::after {
     width: 100%;
     left: 0;
     bottom: 0;
-    transition: all ease 0.6s;
+    transition: all ease 0.7s;
   }
   
   &:hover {
@@ -96,55 +106,31 @@ a:hover {
 }
 
 .btn {
-  background: transparent;
-  border: 2px solid;
+  background-color: transparent;
+  border: 2px solid $yellow;
   border-radius: 0;
   color: $yellow;
   font-family: 'Aleo', sans-serif, Arial;
   font-weight: bold;
-  margin-top: 2rem;
-  padding: .85rem 2rem;
-
+  padding: .5rem 2rem;
+  overflow: hidden;
+  position: relative;
   -webkit-transition: all 0.4s;
   -moz-transition: all 0.4s;
   transition: all 0.4s;
-
-  overflow: hidden;
-  position: relative;
 }
 
 .btn:hover {
   background-color: $yellow;
-  border: 2px solid $yellow;
-  border-radius: 0;
   color: $navy;
-} 
-
-.btn:after {
-  content: '';
-  position: absolute;
-  z-index: -1;
-  -webkit-transition: all 0.4s;
-  -moz-transition: all 0.4s;
-  transition: all 0.4s;
-  width: 100%;
-  height: 0;
-  top: 0;
-  left: 0;
-  background: $yellow;
-  }
- .btn:hover:after,
- .btn:active:after {
-  height: 100%;
+  border: 2px solid $yellow;
 }
 
 .btn-secondary {
   background: transparent;
-  border: 2px solid;
+  border: 2px solid $navy;
   border-radius: 0;
   color: $navy;
-  font-family: 'Aleo', sans-serif, Arial;
-  font-weight: bold;
   margin-top: 2rem;
   padding: .85rem 2rem;
 
