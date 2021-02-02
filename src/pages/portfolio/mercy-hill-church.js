@@ -6,6 +6,9 @@ import PortfolioMoreProjects from "../../components/portfolio-more-projects";
 import Footer from '../../components/footer'
 
 import MercyHillBrief from '../../images/MercyHill_Brief.png'
+import MercyHillBanner from '../../images/mercy-hill_banner.jpeg'
+import MercyHillPostcards from '../../images/mercy-hill_postcards.png'
+import MercyHillSlide from '../../images/mercy-hill_advent-mockup-tv.png'
 
 const MercyHill = () => {
   return (
@@ -31,15 +34,15 @@ const MercyHill = () => {
       <Container>
       <Row className='my-5'>
           <Col lg={{span:10, offset: 1}}>
-            <img src='{}' alt='Mercy Hill Yard Banner' />
+            <img src={MercyHillBanner} alt='Mercy Hill Yard Banner' />
           </Col>
         </Row>
         <Row className='my-5'>
           <Col lg={6}>
-            <img src='' alt='Mercy Hill Magnets' />
+            <img src={MercyHillPostcards} alt='Mercy Hill Magnets' />
           </Col>
           <Col lg={6}>
-            <img src='' alt='Digital Slides' />
+            <img src={MercyHillSlide} alt='Digital Slides' />
           </Col>
         </Row>
       </Container>
