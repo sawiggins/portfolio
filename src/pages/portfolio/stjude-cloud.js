@@ -5,7 +5,10 @@ import PortfolioHeader from '../../components/portfolio-header'
 import PortfolioMoreProjects from "../../components/portfolio-more-projects";
 import Footer from '../../components/footer'
 
-import SJCBrief from '../../images/StJudeCloud_Brief.png'
+import SJCBrief from '../../images/sjc_brief.png'
+import SJCPlatform from '../../images/sjc_platform.png'
+import SJCWizard from '../../images/sjc_edaa-wizard.png'
+import SJCUXWizard from '../../images/sjc_ux-wizard.png'
 
 const StJudeCloud = () => {
   return (
@@ -32,7 +35,7 @@ const StJudeCloud = () => {
       <Container>
         <Row className='my-5'>
           <Col lg={{span:10, offset: 1}}>
-            <img src='' alt='Genomics Platform Homepage' />
+            <img src={SJCPlatform} alt='Genomics Platform Homepage' />
           </Col>
         </Row>
         <Row className="flex-column align-items-center">
@@ -44,10 +47,10 @@ const StJudeCloud = () => {
         </Row>
         <Row className='my-5'>
           <Col lg={8}>
-            <img src='' alt='EDAA Mockup' />
+            <img src={SJCWizard} alt='EDAA Mockup' />
           </Col>
           <Col lg={4}>
-            <img src='' alt='UX Flow' />
+            <img src={SJCUXWizard} alt='UX Flow' />
           </Col>
         </Row>
       </Container>
