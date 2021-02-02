@@ -5,9 +5,13 @@ import PortfolioHeader from '../../components/portfolio-header'
 import PortfolioMoreProjects from "../../components/portfolio-more-projects";
 import Footer from '../../components/footer'
 
-import MercerBrief from '../../images/Mercer_Brief.png'
+import MercerBrief from '../../images/mercer_brief.png'
+import MercerNewsletters from '../../images/mercer_newsletters.png'
+import MercerSocial from '../../images/mercer_book-social.jpg'
+import MercerInfographic from '../../images/mercer_infographic.png'
+import MercerBlog from '../../images/mercer_fbd-blog.png'
 
-const StJudeCloud = () => {
+const MercerCapital = () => {
   return (
     <>
       <PortfolioHeader
@@ -32,7 +36,7 @@ const StJudeCloud = () => {
       <Container>
         <Row className='my-5'>
           <Col lg={{span:10, offset: 1}}>
-            <img src='' alt='Genomics Platform Homepage' />
+            <img src={MercerNewsletters} alt='Mercer Capital newlsetters for content marketing' />
           </Col>
         </Row>
         <Row className="flex-column align-items-center">
@@ -43,12 +47,12 @@ const StJudeCloud = () => {
           </p>
         </Row>
         <Row className='my-5'>
-          <Col lg={5}>
-            <img src='' alt='Social Graphic for Book' />
-            <img src='' alt='Infographic' />
+          <Col lg={5} className="d-flex flex-column justify-content-between">
+            <img src={MercerSocial} alt='Social Graphic for Book' />
+            <img src={MercerInfographic} alt='Infographic' />
           </Col>
           <Col lg={7}>
-            <img src='' alt='Family Business Director Blog' />
+            <img src={MercerBlog} alt='Family Business Director Blog' />
           </Col>
         </Row>
       </Container>
@@ -58,4 +62,4 @@ const StJudeCloud = () => {
   )
 }
 
-export default StJudeCloud;
+export default MercerCapital;
