@@ -6,7 +6,7 @@ import PortfolioMoreProjects from "../../components/portfolio-more-projects";
 import Footer from '../../components/footer'
 
 import MercyHillBrief from '../../images/MercyHill_Brief.png'
-import MercyHillBanner from '../../images/mercy-hill_banner.jpeg'
+import MercyHillBanner from '../../images/mercy-hill_banner.png'
 import MercyHillPostcards from '../../images/mercy-hill_postcards.png'
 import MercyHillSlide from '../../images/mercy-hill_advent-mockup-tv.png'
 

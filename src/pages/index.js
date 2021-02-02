@@ -2,11 +2,16 @@ import React from "react"
 import { Button, Col, Container, Image, Nav, Navbar, Row } from "react-bootstrap"
 import { Link } from "gatsby"
 
-import Icon from '../images/icon.png'
 import ImgStephanie from '../images/thumbnail_stephanie-wiggins-full.png'
 import ImgStephanieDecorated from '../images/swiggins-decorated.png'
 import Trees from '../images/trees.png'
 import GetInTouch from '../images/get-in-touch.png'
+
+import SJCPlatform from '../images/sjc_platform.png'
+import MercerNewsletters from '../images/mercer_newsletters.png'
+import HomerSign from '../images/homer_yard-sign-home.png'
+import MSCAWebsite from '../images/msca_website-homepage.png'
+import MercyHillBanner from '../images/mercy-hill_banner-homepage.png'
 
 const IndexPage = () => {
   return (
@@ -22,7 +27,7 @@ const IndexPage = () => {
       <Container fluid>
         <Container className="section">
           <Row className='mt-5'>
-            <Col md={6} className="hero-text">
+            <Col xs={{span: 12, order: 2}} md={{span: 6, order: 1}} className="hero-text">
               <h1>
                 Hi, I'm 
                 <br />
@@ -30,7 +35,7 @@ const IndexPage = () => {
               </h1>
               <h5 className="mt-3">designer &nbsp;&nbsp; &#38;&#38; &nbsp;&nbsp; developer &nbsp;&nbsp; &#38;&#38; &nbsp;&nbsp; marketer</h5>
             </Col>
-            <Col md={6}>
+            <Col xs={{span: 12, order: 1}} md={{span: 6, order: 2}}>
               <img src={ImgStephanieDecorated} alt="Stephanie Wiggins" />
             </Col>
           </Row>
@@ -65,9 +70,9 @@ const IndexPage = () => {
           <Row>
             <h2>Projects.</h2>
           </Row>
-          <Row className="my-5">
+          <Row className="my-5 portfolio_card-lg">
             <Col md={6}>
-              <img src={Icon} alt="" />
+              <img src={SJCPlatform} alt="St. Jude Cloud Genomics Platform Homepage" />
             </Col>
             <Col>
               <h3>St. Jude Cloud</h3>
@@ -79,8 +84,8 @@ const IndexPage = () => {
               <Button as={Link} to='portfolio/stjude-cloud'>Learn More</Button>
             </Col>
           </Row>
-          <Row className="my-5">
-            <Col>
+          <Row className="my-5 portfolio_card-lg">
+            <Col xs={{span: 12, order: 2}} md={{span: 6, order: 1}}>
               <h3>Mercer Capital</h3>
               <p>
                 I was a senior graphic designer and marketing associate responsible for brand design 
@@ -90,24 +95,24 @@ const IndexPage = () => {
               </p>
               <Button as={Link} to='portfolio/mercer-capital'>Learn More</Button>
             </Col>
-            <Col md={6}>
-              <img src={Icon} alt="" />
+            <Col xs={{span: 12, order: 1}} md={{span: 6, order: 2}}>
+              <img src={MercerNewsletters} alt="Mercer Capital Newsletter Project" />
             </Col>
           </Row>
           <Row className="section">
-            <Col md={4}>
-              <img src={Icon} alt="" />
-              <h3>Homer<br />Real Estate</h3>
+            <Col md={4} className="portfolio_card-sm">
+              <img src={HomerSign} alt="Homer Real Estate Sign" />
+              <h3>Homer Real Estate</h3>
               <Button as={Link} to='portfolio/homer-real-estate'>Learn More</Button>
             </Col>
-            <Col md={4}>
-              <img src={Icon} alt="" />
+            <Col md={4} className="portfolio_card-sm">
+              <img src={MSCAWebsite} alt="MSCA Website" />
               <h3>Mid-South Culinary Alliance</h3>
               <Button as={Link} to='portfolio/mid-south-culinary-alliance'>Learn More</Button>
             </Col>
-            <Col md={4}>
-              <img src={Icon} alt="" />
-              <h3>Mercy Hill <br /> Church</h3>
+            <Col md={4} className="portfolio_card-sm">
+              <img src={MercyHillBanner} alt="Mercy Hill Banner" />
+              <h3>Mercy Hill Church</h3>
               <Button as={Link} to='portfolio/mercy-hill-church'>Learn More</Button>
             </Col>
           </Row>
