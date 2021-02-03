@@ -1,6 +1,8 @@
 import React from "react"
 import { Container, Row, Col } from 'react-bootstrap';
 
+import SiteNav from '../../components/nav.js'
+
 import PortfolioHeader from '../../components/portfolio-header'
 import PortfolioMoreProjects from "../../components/portfolio-more-projects";
 import Footer from '../../components/footer'
@@ -14,6 +16,7 @@ import MercerBlog from '../../images/mercer_fbd-blog.png'
 const MercerCapital = () => {
   return (
     <>
+      <SiteNav />
       <PortfolioHeader
         title="Mercer Capital"
         description=''

@@ -1,6 +1,8 @@
 import React from "react"
 import { Container, Row, Col } from 'react-bootstrap';
 
+import SiteNav from '../../components/nav.js'
+
 import PortfolioHeader from '../../components/portfolio-header'
 import PortfolioMoreProjects from "../../components/portfolio-more-projects";
 import Footer from '../../components/footer'
@@ -12,9 +14,10 @@ import HomerLogos from '../../images/Homer_Logos.jpg'
 const HomerRealEstate = () => {
   return (
     <>
+      <SiteNav />
       <PortfolioHeader
         title="Homer Real Estate"
-        description='Homer Real Esate is the up-and-coming Geico of the Memphis real estate market. A logo and yard sign and brand provides a firm foundation to user test and launch.'
+        description='Homer Real Esate is the up-and-coming Geico of the Memphis real estate market. A brand, logo, and yard sign provide a firm foundation to user test and launch.'
       />
       <Container>
         <Row className='align-items-center'>

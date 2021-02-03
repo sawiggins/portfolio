@@ -5,10 +5,11 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { fab, faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
 
+import SiteNav from '../components/nav.js'
+
 import ImgStephanieDecorated from '../images/swiggins-decorated.png'
 import Trees from '../images/trees.png'
 import GetInTouch from '../images/get-in-touch.png'
-
 import SJCPlatform from '../images/sjc_platform.png'
 import MercerNewsletters from '../images/mercer_newsletters.png'
 import HomerSign from '../images/homer_yard-sign-home.png'
@@ -26,11 +27,7 @@ const IndexPage = () => {
     <main>
       <title>Stephanie Wiggins' Portfolio</title>
 
-      <Navbar>
-        <Nav.Link href="#about">About</Nav.Link>
-        <Nav.Link href="#portfolio">Portfolio</Nav.Link>
-        <Nav.Link href="#contact">Connect</Nav.Link>
-      </Navbar>
+      <SiteNav />
 
       <Container fluid>
         <Container className="section">
@@ -85,7 +82,7 @@ const IndexPage = () => {
             <Col>
               <h3>St. Jude Cloud</h3>
               <p>
-                I am a UI/UX designer and developer for the St. Jude Cloud site, <a href="https://stjude.cloud" target="_blank" rel="noopener noreferrer">stjude.cloud</a>. 
+                I am a UI/UX designer and developer for the St. Jude Cloud site, <a href="https://stjude.cloud" target="_blank" rel="noopener noreferrer" className="link-animate">stjude.cloud</a>. 
                 Specifically, I focus on the Genomics Platform app, a ReactJS/Ruby on Rails site 
                 that shares raw genomics data and analysis tools with scientists globally.
               </p>
@@ -126,8 +123,9 @@ const IndexPage = () => {
           </Row>
         </Container>
 
-        <a name="contact" />
+        
         <Container className="section">
+        <a name="contact" />
           <Row>
             <Col md={6}>
               <img src={GetInTouch} alt="contact me cup of coffee" />

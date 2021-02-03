@@ -1,6 +1,7 @@
 import React from "react"
 import { Container, Row, Col } from 'react-bootstrap';
 
+import SiteNav from '../../components/nav.js'
 import PortfolioHeader from '../../components/portfolio-header'
 import PortfolioMoreProjects from "../../components/portfolio-more-projects";
 import Footer from '../../components/footer'
@@ -13,6 +14,7 @@ import SJCUXWizard from '../../images/sjc_ux-wizard.png'
 const StJudeCloud = () => {
   return (
     <>
+      <SiteNav />
       <PortfolioHeader
         title="St. Jude Cloud"
         description='St. Jude Cloud shares genomics data with scientists around the world.'

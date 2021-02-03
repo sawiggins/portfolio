@@ -1,6 +1,7 @@
 import React from "react"
 import { Container, Row, Col } from 'react-bootstrap';
 
+import SiteNav from '../../components/nav.js'
 import PortfolioHeader from '../../components/portfolio-header'
 import PortfolioMoreProjects from "../../components/portfolio-more-projects";
 import Footer from '../../components/footer'
@@ -16,6 +17,7 @@ import MSCAWebsite from '../../images/msca_website.png'
 const MSCA = () => {
   return (
     <>
+      <SiteNav />
       <PortfolioHeader
         title="Mid-South Culinary Alliance"
         description='Mid-South Culinary Alliance is a non-profit that aim to provide a healthy community and create learning opportunities for at-risk youth.'
@@ -29,10 +31,10 @@ const MSCA = () => {
             <h2 className="mb-2">The Brief.</h2>
             <h5 className="mb-4">branding&nbsp;&nbsp;•&nbsp;&nbsp;logo&nbsp;&nbsp;•&nbsp;&nbsp;website</h5>
             <p>
-            In February 2020, I volunteered with AIGA’s Design in order to provide a styleguide, logo, and mock-ups to be used later that month at <a href="https://www.givecampmemphis.org/" target="_blank" rel="noopener noreferrer">GiveCamp Memphis</a>. At GiveCamp the team completed building out a website, a Saleforce org, and learning management system to help the client launch a non-profit serving local at-risk youth. 
+            In February 2020, I volunteered with AIGA’s Design for Good in order to provide a styleguide, logo, and mock-ups to be used later that month at <a href="https://www.givecampmemphis.org/" target="_blank" rel="noopener noreferrer" className="link-animate">GiveCamp Memphis</a>. At GiveCamp the team completed building out a website, a Saleforce org, and learning management system. 
             </p>
             <p>
-            The goal of the brand was to capture energy that would appeal to youth looking to enter the program and sophistication to appeal to donors looking to partner with the orgnaization. The cornerstone of the project that tied the pieces together is the logo that captures the lead chef mentoring two student chefs as represented by the three chef hats. 
+            The goal of the visual identity was to capture both energy that would appeal to youth looking to enter the program and sophistication to appeal to donors looking to partner with the orgnaization. The cornerstone of the project was the logo that captures the lead chef mentoring two students as represented by the three chef hats. 
             </p>
           </Col>
         </Row>

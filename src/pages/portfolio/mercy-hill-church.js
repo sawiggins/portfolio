@@ -1,6 +1,7 @@
 import React from "react"
 import { Container, Row, Col } from 'react-bootstrap';
 
+import SiteNav from '../../components/nav.js'
 import PortfolioHeader from '../../components/portfolio-header'
 import PortfolioMoreProjects from "../../components/portfolio-more-projects";
 import Footer from '../../components/footer'
@@ -13,9 +14,11 @@ import MercyHillSlide from '../../images/mercy-hill_advent-mockup-tv.png'
 const MercyHill = () => {
   return (
     <>
+      <SiteNav />
+      
       <PortfolioHeader
         title="Mercy Hill Church"
-        description='Reflecting the diverse neighborhood, Mercy Hill Church aimed to reach those in and around their neighborhood in Midtown Memphis.'
+        description='Reflecting the diverse neighborhood, Mercy Hill Church connects those in Midtown Memphis to life in Christ.'
       />
       <Container>
         <Row className='align-items-center'>
@@ -26,7 +29,10 @@ const MercyHill = () => {
             <h2 className="mb-2">The Brief.</h2>
             <h5 className="mb-4">print and digital collateral</h5>
             <p>
-            magnets, banner, digital slides
+              After a fine arts jack of all trades staff member moved, Mercy Hill Church needed help with some print and digital collateral materials. 
+            </p>
+            <p>
+              In relocating, they needed new yard banners to catch people's eye flying down a major road as well as supporting the day to day ministries of the church. These included magnets for ministries and initiatives as well as digital sermon and announcement slides.
             </p>
           </Col>
         </Row>

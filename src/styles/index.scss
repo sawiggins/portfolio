@@ -1,6 +1,15 @@
 $navy: #002642;
 $yellow: #E59500;
 
+.navbar {
+  img {
+    height: 35px;
+  }
+  .nav-link {
+    margin: 0;
+  }
+}
+
 .hero-text {
   display: flex;
   flex-direction: column;
