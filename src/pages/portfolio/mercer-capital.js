@@ -19,7 +19,7 @@ const MercerCapital = () => {
       <SiteNav />
       <PortfolioHeader
         title="Mercer Capital"
-        description=''
+        description='Being a business valuation and financial advisory firm outside of a major market afforded me the opportunity to help this content producing machine target their content well.'
       />
       <Container>
         <Row className='align-items-center'>
@@ -30,7 +30,10 @@ const MercerCapital = () => {
             <h2 className="mb-2">The Brief.</h2>
             <h5 className="mb-4">design&nbsp;&nbsp;•&nbsp;&nbsp;content marketing&nbsp;&nbsp;•&nbsp;&nbsp;salesforce</h5>
             <p>
-             text here
+              Working as a designer and marketing associate for <a href="https://github.com/prawnpdf/prawn" target="_blank" rel="noopener noreferrer" className="link-animate">Mercer Capital</a>  meant I spent the majority of time in and around the blizzard of content the firm produced. The firm supported a three weekly blogs, more than a dozen quarterly newsletters, and regular whitepapers. Thus, I became involved in the entire content marketing process. While the aim was to get content from the analysts out the door, efficienty and targeting were key. Thus, I templatized my documents, performed initial keyword research, and analyzed KPIs after the campaign. 
+            </p>
+            <p>
+              Additionally, our firm built out a Salesforce org to track contacts and touches. I worked closely with the third-party developer to translate the needs of internal stakeholders to meaningful fields. After the launch, I regularly trained the staff and built out additional features to capture the needs of the firm. From there, I built reports to transform that data into information. 
             </p>
           </Col>
         </Row>
@@ -42,12 +45,16 @@ const MercerCapital = () => {
             <img src={MercerNewsletters} alt='Mercer Capital newlsetters for content marketing' />
           </Col>
         </Row>
-        <Row className="flex-column align-items-center">
-          <h6>FEATURED PROJECT</h6>
-          <h2>Family Business Director Book &amp; Blog</h2>
-          <p>
-            Text here
-          </p>
+        <Row>
+        <Col md={4}>
+            <h6>FEATURED PROJECT</h6>
+            <h2>Family Business Director Book &amp; Blo</h2>
+          </Col>
+          <Col md={8}>
+            <p>
+
+            </p>
+          </Col>
         </Row>
         <Row className='my-5'>
           <Col lg={5} className="d-flex flex-column justify-content-between">
