@@ -45,10 +45,10 @@ const MercyHill = () => {
         </Row>
         <Row className='my-5'>
           <Col lg={6}>
-            <img src={MercyHillPostcards} alt='Mercy Hill Magnets' />
+            <img src={MercyHillPostcards} alt='Mercy Hill Magnets' className='mt-2'/>
           </Col>
           <Col lg={6}>
-            <img src={MercyHillSlide} alt='Digital Slides' />
+            <img src={MercyHillSlide} alt='Digital Slides' className='mt-2'/>
           </Col>
         </Row>
       </Container>

@@ -67,11 +67,11 @@ const MercerCapital = () => {
         </Row>
         <Row className='my-5'>
           <Col lg={5} className="d-flex flex-column justify-content-between">
-            <img src={MercerSocial} alt='Social Graphic for Book' />
-            <img src={MercerInfographic} alt='Infographic' />
+            <img src={MercerSocial} alt='Social Graphic for Book' className='mt-2'/>
+            <img src={MercerInfographic} alt='Infographic' className='mt-2' />
           </Col>
           <Col lg={7}>
-            <img src={MercerBlog} alt='Family Business Director Blog' />
+            <img src={MercerBlog} alt='Family Business Director Blog' className='mt-2'/>
           </Col>
         </Row>
       </Container>

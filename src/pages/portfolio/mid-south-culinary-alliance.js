@@ -47,11 +47,11 @@ const MSCA = () => {
         </Row>
         <Row className='my-5'>
           <Col lg={{span: 4, offset: 2}}>
-            <img src={MSCALogo} alt='MSCA Logo' />
+            <img src={MSCALogo} alt='MSCA Logo' className='mt-2'/>
           </Col>
           <Col lg={4} className="d-flex flex-column justify-content-between">
-            <img src={MSCAAssets} alt='Texture and Icons' />
-            <img src={MSCAPhoto} alt='MSCA Students and Chef' />
+            <img src={MSCAAssets} alt='Texture and Icons' className='mt-2'/>
+            <img src={MSCAPhoto} alt='MSCA Students and Chef' className='mt-2'/>
           </Col>
         </Row>
         <Row className='my-5'>

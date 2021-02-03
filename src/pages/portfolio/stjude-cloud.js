@@ -61,10 +61,10 @@ const StJudeCloud = () => {
           </Col>
         </Row>
         <Row className='my-5'>
-          <Col lg={8}>
+          <Col lg={8} className='mt-2'>
             <img src={SJCWizard} alt='EDAA Mockup' />
           </Col>
-          <Col lg={4}>
+          <Col lg={4} className='mt-2'>
             <img src={SJCUXWizard} alt='UX Flow' />
           </Col>
         </Row>
