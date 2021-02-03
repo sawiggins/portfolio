@@ -1,0 +1,92 @@
+$navy: #002642;
+$yellow: #E59500;
+
+.navbar {
+  img {
+    height: 35px;
+  }
+  .nav-link {
+    margin: 0;
+  }
+}
+
+.hero-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  h1 {
+    margin-top: 3rem;
+  }
+
+  @include media-breakpoint-up(md) {
+    h1 {
+      margin-top: 0;
+    }
+  }
+}
+
+.about-me {
+  h2 {
+    margin-top: 3rem;
+  }
+
+  @include media-breakpoint-up(md) {
+    h2 {
+      margin-top: 0;
+    }
+  }
+}
+
+.portfolio_card-lg {
+  h3 {
+    flex-grow: 2;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+  }
+
+  .btn {
+    margin-top: 0;
+  }
+}
+
+.portfolio_card-sm {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+  align-items: flex-start;
+  
+  h3 {
+    flex-grow: 2;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+  }
+
+  .btn {
+    margin-top: 0;
+  }
+}
+
+.get-in-touch {
+  h2 {
+    margin-top: 3rem;
+  }
+
+  .btn_email {
+    background-color: $yellow;
+    color: $navy;
+    padding: 1rem 3.5rem;
+  }
+
+  .btn_email:hover {
+    background-color: transparent;
+    color: $yellow;
+  }
+
+  @include media-breakpoint-up(md) {
+    h2 {
+      margin-top: 0;
+    }
+  }
+}

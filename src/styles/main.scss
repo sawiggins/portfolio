@@ -1,0 +1,174 @@
+@import "~bootstrap/scss/bootstrap";
+@import "./index.scss";
+@import "./components/portfolio-more-projects.scss";
+@import "./components/footer.scss";
+
+$navy: #002642;
+$yellow: #E59500;
+$red: #840032;
+$gray-yellow: #EEEDEA;
+
+
+body {
+  font-family: 'Montserrat', sans-serif, Arial;
+  background-color: #002642;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Aleo', sans-serif, Arial;
+  color: $yellow;
+}
+
+h2 {
+  margin-bottom: 2rem;
+}
+
+p {
+  color: $white;
+  line-height: 2;
+}
+
+img {
+  max-width: 100%
+}
+
+.nav-link {
+  font-family: 'Aleo', sans-serif, Arial;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+$underlineColor: $yellow;
+$underlineHeight: 5%;
+
+a {
+  color: $yellow;
+}
+
+.svg-inline--fa {
+  font-size: 1.25rem;
+  height: 1.25em;
+  vertical-align: middle;
+}
+
+// animation from: https://codepen.io/MishaHahaha/pen/AXxYKQ
+.link-animate {
+  position: relative;
+  text-decoration: none;
+  display: inline-block;
+  color: $yellow;
+  padding: 0 1px;
+  transition: color ease 0.4s;
+  
+  &::before, &::after {
+    content: '';
+    position: absolute;
+    background-color: $underlineColor;
+    z-index: -1;
+    height: $underlineHeight;
+  }
+  
+  &::before {
+    width: 0%;
+    left: 0;
+    bottom: 0;
+    transition: width ease 0.5s;
+  }
+  
+  &::after {
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    transition: all ease 0.7s;
+  }
+  
+  &:hover {
+    &::before {
+      width: 100%;
+    }
+    
+    &::after {
+      left: 100%;
+      width: 0%;
+      transition: all ease 0.2s;
+    }
+  }
+}
+
+a:hover {
+  color: $yellow;
+  text-decoration: none;
+}
+
+.section {
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
+
+.btn {
+  background-color: transparent;
+  border: 2px solid $yellow;
+  border-radius: 0;
+  color: $yellow;
+  font-family: 'Aleo', sans-serif, Arial;
+  font-weight: bold;
+  padding: .5rem 2rem;
+  overflow: hidden;
+  position: relative;
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.btn:hover {
+  background-color: $yellow;
+  color: $navy;
+  border: 2px solid $yellow;
+}
+
+.btn-secondary {
+  background: transparent;
+  border: 2px solid $navy;
+  border-radius: 0;
+  color: $navy;
+  margin-top: 2rem;
+  padding: .85rem 2rem;
+
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  transition: all 0.4s;
+
+  overflow: hidden;
+  position: relative;
+}
+
+.btn-secondary:hover {
+  background-color: $navy;
+  border: 2px solid $navy;
+  border-radius: 0;
+  color: $yellow;
+} 
+
+.btn-secondary:after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  transition: all 0.4s;
+  width: 100%;
+  height: 0;
+  top: 0;
+  left: 0;
+  background: $navy;
+  }
+ .btn-secondary:hover:after,
+ .btn-secondary:active:after {
+  height: 100%;
+}
+
+.btn-secondary-outline {
+  background-color: transparent;
+  border: 2px solid $navy;
+  border: 2px solid $navy;
+}

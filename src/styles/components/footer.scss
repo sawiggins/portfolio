@@ -1,0 +1,29 @@
+$navy: #002642;
+$yellow: #E59500;
+
+.footer {
+  background-color: $yellow;
+
+  h2 {
+    color: $navy;
+  }
+
+  .btn, .btn-secondary {
+    margin-top: 0;
+  }
+
+  .btn_email {
+    flex-grow: 1;
+  }
+
+  .btn_brand {
+    margin-left: 2rem;
+  }
+
+  @include media-breakpoint-up(md) {
+    h2 {
+      margin: 0;
+    }
+  }
+}
+

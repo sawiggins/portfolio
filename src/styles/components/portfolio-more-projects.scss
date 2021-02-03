@@ -1,0 +1,35 @@
+$navy: #002642;
+$yellow: #E59500;
+
+.portfolio__more-projects {
+
+  a::before {
+    z-index: 2;
+  }
+
+  a::after {
+    z-index: 2;
+  }
+
+  @include media-breakpoint-up(lg) {
+    .projects-box {
+      background-color: $navy;
+      border: 2px $yellow solid; 
+      padding: 4rem 12rem;
+    }
+    .row__more-projects {
+      background-image: url('../images/portfolio_more-projects.png');
+      background-repeat: no-repeat;
+      background-size: 950px;
+      padding: 3.5rem 0;
+    }
+  }
+
+  @include media-breakpoint-up(xl) { 
+    .row__more-projects {
+      background-size: 1050px;
+    }
+  }
+}
+
+
