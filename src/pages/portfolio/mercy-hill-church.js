@@ -29,10 +29,10 @@ const MercyHill = () => {
             <h2 className="mb-2">The Brief.</h2>
             <h5 className="mb-4">print and digital collateral</h5>
             <p>
-              After a fine arts jack of all trades staff member moved, Mercy Hill Church needed help with some print and digital collateral materials. 
+              After a fine arts jack of all trades staff member moved, Mercy Hill Church needed help with some print and digital collateral material. 
             </p>
             <p>
-              In relocating, they needed new yard banners to catch people's eye flying down a major road as well as supporting the day to day ministries of the church. These included magnets for ministries and initiatives as well as digital sermon and announcement slides.
+              In relocating to a new building themselves, they needed a new yard banners to catch people's eye driving down a major road as well as supporting the day to day ministries of the church. These included magnets featuring ministries and initiatives as well as digital sermon and announcement slides.
             </p>
           </Col>
         </Row>

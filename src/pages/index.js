@@ -1,5 +1,5 @@
 import React from "react"
-import { Button, Col, Container, Image, Nav, Navbar, Row } from "react-bootstrap"
+import { Button, Col, Container, Row } from "react-bootstrap"
 import { Link } from "gatsby"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { library } from "@fortawesome/fontawesome-svg-core";
@@ -83,7 +83,7 @@ const IndexPage = () => {
               <h3>St. Jude Cloud</h3>
               <p>
                 I am a UI/UX designer and developer for the St. Jude Cloud site, <a href="https://stjude.cloud" target="_blank" rel="noopener noreferrer" className="link-animate">stjude.cloud</a>. 
-                Specifically, I focus on the Genomics Platform app, a ReactJS/Ruby on Rails site 
+                Specifically, I focus on the <a href="https://platform.stjude.cloud" target="_blank" rel="noopener noreferrer" className="link-animate">Genomics Platform</a> app, a ReactJS/Ruby on Rails site 
                 that shares raw genomics data and analysis tools with scientists globally.
               </p>
               <Button as={Link} to='portfolio/stjude-cloud'>Learn More</Button>
@@ -93,9 +93,7 @@ const IndexPage = () => {
             <Col xs={{span: 12, order: 2}} md={{span: 6, order: 1}}>
               <h3>Mercer Capital</h3>
               <p>
-                I was a senior graphic designer and marketing associate responsible for brand design 
-                in both digital and print mediums and supported marketing functions across the firm.
-                These marketing efforts spanned the content marketing process from initial research 
+                I was a senior graphic designer and marketing associate for <a href="https://mercercapital.com" target="_blank" rel="noopener noreferrer" className="link-animate">Mercer Capital</a>, a business valuation and financial advisory firm. I designed for both digital and print mediums and supported marketing efforts across the firm that spanned the content marketing process – from initial research 
                 and content creation to distribution and post-production analysis.
               </p>
               <Button as={Link} to='portfolio/mercer-capital'>Learn More</Button>
