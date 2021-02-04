@@ -15,6 +15,7 @@ import MercerNewsletters from '../images/mercer_newsletters.png'
 import HomerSign from '../images/homer_yard-sign-home.png'
 import MSCAWebsite from '../images/msca_website-homepage.png'
 import MercyHillBanner from '../images/mercy-hill_banner-homepage.png'
+import Resume from '../downloads/Stephanie-Wiggins_Resume.pdf'
 
 library.add(
   fab,
@@ -65,7 +66,7 @@ const IndexPage = () => {
                 navigating them through your complex app. Afterwards, I cull data and analyze to understand
                 how an article or app is performing and how to enhance the next user's experience. 
               </p>
-              <Button>Download My Resume</Button>
+              <Button href={Resume}>Download My Resume</Button>
             </Col>
           </Row>
         </Container>
