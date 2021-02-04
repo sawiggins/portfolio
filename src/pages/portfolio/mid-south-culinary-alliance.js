@@ -6,7 +6,7 @@ import PortfolioHeader from '../../components/portfolio-header'
 import PortfolioMoreProjects from "../../components/portfolio-more-projects";
 import Footer from '../../components/footer'
 
-import MSCABrief from '../../images/msca_brief.png'
+import MSCABrief from '../../images/msca_feature.png'
 import MSCAAssets from '../../images/msca_assets.png'
 import MSCALogo from '../../images/msca_logo-tall.png'
 import MSCAPhoto from '../../images/msca_group.png'
