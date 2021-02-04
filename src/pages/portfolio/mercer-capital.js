@@ -7,7 +7,7 @@ import PortfolioHeader from '../../components/portfolio-header'
 import PortfolioMoreProjects from "../../components/portfolio-more-projects";
 import Footer from '../../components/footer'
 
-import MercerBrief from '../../images/mercer_brief.png'
+import MercerBrief from '../../images/mercer_feature.png'
 import MercerNewsletters from '../../images/mercer_newsletters.png'
 import MercerSocial from '../../images/mercer_book-social.jpg'
 import MercerInfographic from '../../images/mercer_infographic.png'
