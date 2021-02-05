@@ -1,7 +1,7 @@
 import React from "react"
 import { Container, Row, Col } from 'react-bootstrap';
 
-import SiteNav from '../../components/nav.js'
+import PortfolioNav from '../../components/portfolio-nav.js'
 import PortfolioHeader from '../../components/portfolio-header'
 import PortfolioMoreProjects from "../../components/portfolio-more-projects";
 import Footer from '../../components/footer'
@@ -17,7 +17,7 @@ import MSCAWebsite from '../../images/msca_website.png'
 const MSCA = () => {
   return (
     <>
-      <SiteNav />
+      <PortfolioNav />
       <PortfolioHeader
         title="Mid-South Culinary Alliance"
         description='Mid-South Culinary Alliance is a non-profit that provides a healthy community and creates learning opportunities for at-risk youth.'

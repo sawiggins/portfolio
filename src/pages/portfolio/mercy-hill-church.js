@@ -1,7 +1,7 @@
 import React from "react"
 import { Container, Row, Col } from 'react-bootstrap';
 
-import SiteNav from '../../components/nav.js'
+import PortfolioNav from '../../components/portfolio-nav.js'
 import PortfolioHeader from '../../components/portfolio-header'
 import PortfolioMoreProjects from "../../components/portfolio-more-projects";
 import Footer from '../../components/footer'
@@ -14,7 +14,7 @@ import MercyHillSlide from '../../images/mercy-hill_advent-mockup-tv.png'
 const MercyHill = () => {
   return (
     <>
-      <SiteNav />
+      <PortfolioNav />
       
       <PortfolioHeader
         title="Mercy Hill Church"

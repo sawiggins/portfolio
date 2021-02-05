@@ -1,5 +1,11 @@
 module.exports = {
   plugins: [
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        icon: `src/images/favicon.png`,
+      },
+    },
     `gatsby-plugin-sass`,
     `gatsby-plugin-sharp`, {
       resolve: `gatsby-source-filesystem`,

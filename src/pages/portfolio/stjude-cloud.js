@@ -1,7 +1,7 @@
 import React from "react"
 import { Container, Row, Col } from 'react-bootstrap';
 
-import SiteNav from '../../components/nav.js'
+import PortfolioNav from '../../components/portfolio-nav.js'
 import PortfolioHeader from '../../components/portfolio-header'
 import PortfolioMoreProjects from "../../components/portfolio-more-projects";
 import Footer from '../../components/footer'
@@ -14,7 +14,7 @@ import SJCUXWizard from '../../images/sjc_ux-wizard.png'
 const StJudeCloud = () => {
   return (
     <>
-      <SiteNav />
+      <PortfolioNav />
       <PortfolioHeader
         title="St. Jude Cloud"
         description='St. Jude Cloud empowers researchers across the world to advance cures for pediatric cancer and other pediatric catastrophic diseases.'

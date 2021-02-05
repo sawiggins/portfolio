@@ -1,20 +1,19 @@
 import React from "react"
 import { Container, Row, Col } from 'react-bootstrap';
 
-import SiteNav from '../../components/nav.js'
-
+import PortfolioNav from '../../components/portfolio-nav.js'
 import PortfolioHeader from '../../components/portfolio-header'
 import PortfolioMoreProjects from "../../components/portfolio-more-projects";
 import Footer from '../../components/footer'
 
-import HomerBrief from '../../images/Homer_Brief.png'
+import HomerBrief from '../../images/homer_feature.png'
 import HomerYardSign from '../../images/Homer_Yard-Sign.png'
 import HomerLogos from '../../images/Homer_Logos.jpg'
 
 const HomerRealEstate = () => {
   return (
     <>
-      <SiteNav />
+      <PortfolioNav />
       <PortfolioHeader
         title="Homer Real Estate"
         description='Homer Real Esate is the up-and-coming Geico of the Memphis real estate market. A brand, logo, and yard sign provide a firm foundation to user test and launch.'
@@ -22,7 +21,7 @@ const HomerRealEstate = () => {
       <Container>
         <Row className='align-items-center'>
           <Col md={6}>
-            <img src={HomerBrief} alt='Kitchen Real Estate' />
+            <img src={HomerBrief} alt='Real Estate' />
           </Col>
           <Col md={6}>
             <h2 className="mb-2">The Brief.</h2>
