@@ -50,7 +50,7 @@ const IndexPage = () => {
         <a name="about" />
         <Container className="section about-me">
           <Row >
-            <Col md={6}>
+            <Col md={6} className="d-flex flex-column justify-content-center">
               <img src={Trees} alt="trees" />
             </Col>
             <Col md={6}>

@@ -6,7 +6,7 @@ import PortfolioHeader from '../../components/portfolio-header'
 import PortfolioMoreProjects from "../../components/portfolio-more-projects";
 import Footer from '../../components/footer'
 
-import HomerBrief from '../../images/Homer_Brief.png'
+import HomerBrief from '../../images/homer_feature.png'
 import HomerYardSign from '../../images/Homer_Yard-Sign.png'
 import HomerLogos from '../../images/Homer_Logos.jpg'
 
@@ -21,7 +21,7 @@ const HomerRealEstate = () => {
       <Container>
         <Row className='align-items-center'>
           <Col md={6}>
-            <img src={HomerBrief} alt='Kitchen Real Estate' />
+            <img src={HomerBrief} alt='Real Estate' />
           </Col>
           <Col md={6}>
             <h2 className="mb-2">The Brief.</h2>
