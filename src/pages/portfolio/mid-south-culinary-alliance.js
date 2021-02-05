@@ -17,6 +17,7 @@ import MSCAWebsite from '../../images/msca_website.png'
 const MSCA = () => {
   return (
     <>
+    <title>Stephanie Wiggins | Mid-South Culinary Alliance</title>
       <PortfolioNav />
       <PortfolioHeader
         title="Mid-South Culinary Alliance"
@@ -31,10 +32,10 @@ const MSCA = () => {
             <h2 className="mb-2">The Brief.</h2>
             <h5 className="mb-4">branding&nbsp;&nbsp;•&nbsp;&nbsp;logo&nbsp;&nbsp;•&nbsp;&nbsp;website</h5>
             <p>
-            In February 2020, I volunteered with AIGA’s Design for Good in order to provide a styleguide, logo, and mock-ups to be used later that month at <a href="https://www.givecampmemphis.org/" target="_blank" rel="noopener noreferrer" className="link-animate">GiveCamp Memphis</a>. I joined the team at GiveCamp to complete building out a website, a Saleforce org, and learning management system. 
+            In February 2020, I volunteered with AIGA’s Design for Good in order to provide a styleguide, logo, and mock-ups to be used later that month at <a href="https://www.givecampmemphis.org/" target="_blank" rel="noopener noreferrer" className="link-animate">GiveCamp Memphis</a>. At GiveCamp our team built out a website, a Saleforce org, and learning management system. 
             </p>
             <p>
-            The goal of the visual identity was to capture both energy that would appeal to youth looking to enter the program and sophistication to appeal to donors looking to partner with the orgnaization. The cornerstone of the project was the logo that captures the lead chef mentoring two students as represented by the three chef hats. 
+            The goal of the visual identity was to capture both energy that would appeal to youth looking to enter the program and sophistication to appeal to donors looking to partner with the organization. The cornerstone of the project was the logo that captures the lead chef mentoring two students as represented by the three chef hats. 
             </p>
           </Col>
         </Row>

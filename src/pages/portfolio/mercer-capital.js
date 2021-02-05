@@ -15,6 +15,7 @@ import MercerBlog from '../../images/mercer_fbd-blog.png'
 const MercerCapital = () => {
   return (
     <>
+      <title>Stephanie Wiggins | Mercer Capital</title>
       <PortfolioNav />
       <PortfolioHeader
         title="Mercer Capital"
@@ -29,10 +30,10 @@ const MercerCapital = () => {
             <h2 className="mb-2">The Brief.</h2>
             <h5 className="mb-4">design&nbsp;&nbsp;•&nbsp;&nbsp;content marketing&nbsp;&nbsp;•&nbsp;&nbsp;salesforce</h5>
             <p>
-              Working as a designer and marketing associate for <a href="https://mercercapital.com" target="_blank" rel="noopener noreferrer" className="link-animate">Mercer Capital</a>  meant I spent the majority of time in and around the blizzard of content the firm produced. The firm supported a three weekly blogs, more than a dozen quarterly newsletters, and regular whitepapers. Thus, I became involved in the entire content marketing process. While the aim was to get content from the analysts out the door, efficiency and targeting were key. Thus, I templatized my documents, performed initial keyword research, and analyzed KPIs after the campaign. 
+              Working as a designer and marketing associate for <a href="https://mercercapital.com" target="_blank" rel="noopener noreferrer" className="link-animate">Mercer Capital</a>  meant I spent the majority of time in and around the blizzard of content the firm produced. Since the firm produced three weekly blogs, more than a dozen quarterly newsletters, and regular whitepapers, I became involved in the entire content marketing process. While the aim was to get content from the analysts out the door, efficiency and targeting were key. Thus, I templatized my documents, performed initial keyword research, and analyzed KPIs after the campaign. 
             </p>
             <p>
-              Additionally, our firm built out a <a href="https://mercercapital.com" target="_blank" rel="noopener noreferrer" className="link-animate">Salesforce</a> org to track contacts and touches. I worked closely with the third-party developer to translate the needs of internal stakeholders to meaningful fields. After the launch, I regularly trained the staff and built out additional features to capture the needs of the firm. From there, I built reports to transform that data into information. 
+              Additionally, the firm built out a <a href="https://mercercapital.com" target="_blank" rel="noopener noreferrer" className="link-animate">Salesforce</a> org to track contacts and touches. I worked closely with the third-party developer to translate the needs of internal stakeholders to meaningful fields. After the launch, I regularly trained the staff and built out additional features to capture the needs of the firm. From there, I built reports to transform that data into information. 
             </p>
           </Col>
         </Row>
@@ -47,7 +48,7 @@ const MercerCapital = () => {
         <Row>
         <Col md={4}>
             <h6>FEATURED PROJECT</h6>
-            <h2>Family Business Director Book &amp; Blo</h2>
+            <h2>Family Business Director Book &amp; Blog</h2>
           </Col>
           <Col md={8}>
             <p>

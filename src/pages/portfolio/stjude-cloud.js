@@ -14,6 +14,7 @@ import SJCUXWizard from '../../images/sjc_ux-wizard.png'
 const StJudeCloud = () => {
   return (
     <>
+      <title>Stephanie Wiggins | St. Jude Cloud</title>
       <PortfolioNav />
       <PortfolioHeader
         title="St. Jude Cloud"

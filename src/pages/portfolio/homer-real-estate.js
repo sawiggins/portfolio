@@ -13,6 +13,7 @@ import HomerLogos from '../../images/Homer_Logos.jpg'
 const HomerRealEstate = () => {
   return (
     <>
+      <title>Stephanie Wiggins | Homer Real Estate</title>
       <PortfolioNav />
       <PortfolioHeader
         title="Homer Real Estate"

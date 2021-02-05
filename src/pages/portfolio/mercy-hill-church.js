@@ -14,6 +14,8 @@ import MercyHillSlide from '../../images/mercy-hill_advent-mockup-tv.png'
 const MercyHill = () => {
   return (
     <>
+      <title>Stephanie Wiggins | Mercy Hill Church</title>
+
       <PortfolioNav />
       
       <PortfolioHeader
@@ -32,7 +34,7 @@ const MercyHill = () => {
               After a fine arts jack of all trades staff member moved, Mercy Hill Church needed help with some print and digital collateral material. 
             </p>
             <p>
-              In relocating to a new building themselves, they needed a new yard banners to catch people's eye driving down a major road as well as supporting the day to day ministries of the church. These included magnets featuring ministries and initiatives as well as digital sermon and announcement slides.
+              In relocating to a new building themselves, they needed a new yard banner to catch people's eye driving down a major road. Additionally, they requested collateral to support the day-to-day ministries of the church. These included magnets featuring ministries and initiatives as well as digital sermon and announcement slides.
             </p>
           </Col>
         </Row>

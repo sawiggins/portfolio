@@ -26,7 +26,7 @@ library.add(
 const IndexPage = () => {
   return (
     <main>
-      <title>Stephanie Wiggins' Portfolio</title>
+      <title>Stephanie Wiggins</title>
 
       <SiteNav />
 
@@ -54,7 +54,7 @@ const IndexPage = () => {
               <img src={Trees} alt="trees" />
             </Col>
             <Col md={6}>
-              <h2>Analytics yet Creative.</h2>
+              <h2>Analytical yet Creative.</h2>
               <p>
                 With graphic design, marketing, and web development skills, I weave my expertise 
                 triad with a project’s initiatives to create a user-centric, cohesive experience. 
@@ -94,8 +94,11 @@ const IndexPage = () => {
             <Col xs={{span: 12, order: 2}} md={{span: 6, order: 1}}>
               <h3>Mercer Capital</h3>
               <p>
-                I was a senior graphic designer and marketing associate for <a href="https://mercercapital.com" target="_blank" rel="noopener noreferrer" className="link-animate">Mercer Capital</a>, a business valuation and financial advisory firm. I designed for both digital and print mediums and supported marketing efforts across the firm that spanned the content marketing process – from initial research 
-                and content creation to distribution and post-production analysis.
+                I was a senior graphic designer and marketing associate for <a href="https://mercercapital.com" target="_blank" rel="noopener noreferrer" className="link-animate">Mercer Capital</a>, 
+                a business valuation and financial advisory firm. I designed for both digital and print mediums 
+                and supported marketing efforts across the firm. These initiatives spanned the content 
+                marketing process – from initial research and content creation to distribution and 
+                post-production analysis.
               </p>
               <Button as={Link} to='portfolio/mercer-capital'>Learn More</Button>
             </Col>
