@@ -1,17 +1,13 @@
 import React from "react"
 import { Button, Col, Container, Row } from "react-bootstrap"
-import { Link } from "gatsby"
+import { graphql, Link } from "gatsby"
+import Img from "gatsby-image"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { fab, faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
 
 import SiteNav from '../components/nav.js'
 
-import ImgStephanieDecorated from '../images/swiggins-decorated.png'
-import Trees from '../images/trees.png'
-import GetInTouch from '../images/get-in-touch.png'
-import SJCPlatform from '../images/sjc_platform.png'
-import MercerNewsletters from '../images/mercer_newsletters.png'
 import HomerSign from '../images/homer_yard-sign-home.png'
 import MSCAWebsite from '../images/msca_website-homepage.png'
 import MercyHillBanner from '../images/mercy-hill_banner-homepage.png'
@@ -23,7 +19,7 @@ library.add(
   faGithub
 );
 
-const IndexPage = () => {
+const IndexPage = ({ data }) => {
   return (
     <main>
       <title>Stephanie Wiggins</title>
@@ -39,10 +35,10 @@ const IndexPage = () => {
                 <br />
                 Stephanie Wiggins.
               </h1>
-              <h5 className="mt-3">designer &nbsp;&nbsp; &#38;&#38; &nbsp;&nbsp; developer &nbsp;&nbsp; &#38;&#38; &nbsp;&nbsp; marketer</h5>
+              <h5 className="mt-3">graphic designer &nbsp;&nbsp; &#38;&#38; &nbsp;&nbsp; web developer</h5>
             </Col>
             <Col xs={{span: 12, order: 1}} md={{span: 6, order: 2}}>
-              <img src={ImgStephanieDecorated} alt="Stephanie Wiggins" />
+              <Img fluid={data.stephanieFeature.childImageSharp.fluid} fadeIn={false} alt="Stephanie Wiggins" />
             </Col>
           </Row>
         </Container>
@@ -51,19 +47,17 @@ const IndexPage = () => {
         <Container className="section about-me">
           <Row >
             <Col md={6} className="d-flex flex-column justify-content-center">
-              <img src={Trees} alt="trees" />
+            <Img fluid={data.trees.childImageSharp.fluid} fadeIn={false} alt="trees" />
             </Col>
             <Col md={6}>
               <h2>Analytical yet Creative.</h2>
               <p>
                 With graphic design, marketing, and web development skills, I weave my expertise 
                 triad with a project’s initiatives to create a user-centric, cohesive experience. 
-                I aim to create projects both that are beautiful and that people enjoy using. 
+                I aim to create projects that are both beautiful and enjoyable to use. 
               </p>
               <p>
-                With a round set of skills and experiences, I enjoy walking the user's journey, whether
-                helping them discover valuable content in your article they found at the top of Google to 
-                navigating them through your complex app. Afterwards, I cull data and analyze to understand
+                Using my well-rounded experience in UI design and development, I enjoy helping users discover valuable content in informative articles and navigate through complex applications. Afterwards, I cull data and analyze to understand
                 how an article or app is performing and how to enhance the next user's experience. 
               </p>
               <Button href={Resume}>Download My Resume</Button>
@@ -78,13 +72,13 @@ const IndexPage = () => {
           </Row>
           <Row className="my-5 portfolio_card-lg">
             <Col md={6}>
-              <img src={SJCPlatform} alt="St. Jude Cloud Genomics Platform Homepage" />
+            <Img fluid={data.sjcPlatform.childImageSharp.fluid} fadeIn={false} alt="Homepage from St. Jude Cloud Genomics Platform" />
             </Col>
             <Col>
               <h3>St. Jude Cloud</h3>
               <p>
-                I am a UI/UX designer and developer for the St. Jude Cloud site, <a href="https://stjude.cloud" target="_blank" rel="noopener noreferrer" className="link-animate">stjude.cloud</a>. 
-                Specifically, I focus on the <a href="https://platform.stjude.cloud" target="_blank" rel="noopener noreferrer" className="link-animate">Genomics Platform</a> app, a ReactJS/Ruby on Rails site 
+                I am a UI/UX designer and web developer for the St. Jude Cloud website, <a href="https://stjude.cloud" target="_blank" rel="noopener noreferrer" className="link-animate">stjude.cloud</a>. 
+                Specifically, I focus on the <a href="https://platform.stjude.cloud" target="_blank" rel="noopener noreferrer" className="link-animate">Genomics Platform</a>, a ReactJS/Ruby on Rails application 
                 that shares raw genomics data and analysis tools with scientists globally.
               </p>
               <Button as={Link} to='portfolio/stjude-cloud'>Learn More</Button>
@@ -96,29 +90,32 @@ const IndexPage = () => {
               <p>
                 I was a senior graphic designer and marketing associate for <a href="https://mercercapital.com" target="_blank" rel="noopener noreferrer" className="link-animate">Mercer Capital</a>, 
                 a business valuation and financial advisory firm. I designed for both digital and print mediums 
-                and supported marketing efforts across the firm. These initiatives spanned the content 
+                and supported marketing efforts across the firm. These initiatives spanned the entire content 
                 marketing process – from initial research and content creation to distribution and 
                 post-production analysis.
               </p>
               <Button as={Link} to='portfolio/mercer-capital'>Learn More</Button>
             </Col>
             <Col xs={{span: 12, order: 1}} md={{span: 6, order: 2}}>
-              <img src={MercerNewsletters} alt="Mercer Capital Newsletter Project" />
+            <Img fluid={data.mercerNewsletters.childImageSharp.fluid} fadeIn={false} alt="Mercer Capital Newsletters" />
             </Col>
           </Row>
           <Row className="section">
             <Col md={4} className="portfolio_card-sm">
-              <img src={HomerSign} alt="Homer Real Estate Sign" />
+              {/* <Img fluid={data.homerYardSign.childImageSharp.fluid} fadeIn={false} alt="Homer Real Estate Yard Sign" /> */}
+              <img src={HomerSign} alt="Homer Real Estate Yard Sign" /> 
               <h3>Homer Real Estate</h3>
               <Button as={Link} to='portfolio/homer-real-estate'>Learn More</Button>
             </Col>
             <Col md={4} className="portfolio_card-sm">
-              <img src={MSCAWebsite} alt="MSCA Website" />
+              {/* <Img fluid={data.mscaHomepage.childImageSharp.fluid} fadeIn={false} alt="Mid-South Culinary Alliance Homepage" /> */}
+              <img src={MSCAWebsite} alt="Mid-South Culinary Alliance Homepage" /> 
               <h3>Mid-South Culinary Alliance</h3>
               <Button as={Link} to='portfolio/mid-south-culinary-alliance'>Learn More</Button>
             </Col>
             <Col md={4} className="portfolio_card-sm">
-              <img src={MercyHillBanner} alt="Mercy Hill Banner" />
+              {/* <Img fluid={data.mercyHillBanner.childImageSharp.fluid} fadeIn={false} alt="Mercy Hill Banner" /> */}
+              <img src={MercyHillBanner} alt="Mercy Hill Banner" /> 
               <h3>Mercy Hill Church</h3>
               <Button as={Link} to='portfolio/mercy-hill-church'>Learn More</Button>
             </Col>
@@ -130,7 +127,7 @@ const IndexPage = () => {
         <a name="contact" />
           <Row>
             <Col md={6}>
-              <img src={GetInTouch} alt="contact me cup of coffee" />
+              <Img fluid={data.getInTouch.childImageSharp.fluid} fadeIn={false} alt="Cup of Coffee" />
             </Col>
             <Col md={5} lg={4} className="get-in-touch">
               <div className="d-flex flex-column align-items-start">
@@ -174,3 +171,43 @@ const IndexPage = () => {
 }
 
 export default IndexPage
+
+export const query = graphql`
+  query {
+    stephanieFeature: file(relativePath: { eq: "swiggins-decorated.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 700) {
+          ...GatsbyImageSharpFluid_noBase64
+        }
+      }
+    }
+    trees: file(relativePath: { eq: "trees.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 700) {
+          ...GatsbyImageSharpFluid_noBase64
+        }
+      }
+    }
+    sjcPlatform: file(relativePath: { eq: "sjc_platform.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 700) {
+          ...GatsbyImageSharpFluid_noBase64
+        }
+      }
+    }
+    mercerNewsletters: file(relativePath: { eq: "mercer_newsletters.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 700) {
+          ...GatsbyImageSharpFluid_noBase64
+        }
+      }
+    }
+    getInTouch: file(relativePath: { eq: "get-in-touch.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 700) {
+          ...GatsbyImageSharpFluid_noBase64
+        }
+      }
+    }
+  }
+`

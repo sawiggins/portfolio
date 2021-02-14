@@ -1,22 +1,21 @@
 import * as React from "react"
 import { Container, Row, Col } from "react-bootstrap"
-import { Link } from "gatsby"
+import { graphql, Link } from "gatsby"
+import Img from "gatsby-image"
 
-import EmptyCoffeeCup from '../images/404.png';
-
-const NotFoundPage = () => {
+const NotFoundPage = ({ data }) => {
   return (
     <main className='d-flex align-items-center full-height'>
       <title>Not found</title>
     <Container>
       <Row>
       <Col md={5}>
-        <img src={EmptyCoffeeCup} alt="Empty Coffee Cup" />
+        <Img fluid={data.EmptyCoffeeCup.childImageSharp.fluid} fadeIn={false} alt="Church" />
       </Col>
       <Col md={{span: 5, offset: 1}} className="d-flex flex-column justify-content-center">
         <h1>404.</h1>
         <p>
-          Sorry, I cannot find that.
+          Sorry, getting a refill to fuel more design and development.
           <br />
           {process.env.NODE_ENV === "development" ? (
             <>
@@ -36,3 +35,15 @@ const NotFoundPage = () => {
 }
 
 export default NotFoundPage
+
+export const query = graphql`
+  query {
+    EmptyCoffeeCup: file(relativePath: { eq: "404.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 700) {
+          ...GatsbyImageSharpFluid_noBase64
+        }
+      }
+    }
+  }
+`

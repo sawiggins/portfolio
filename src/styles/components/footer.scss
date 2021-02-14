@@ -14,15 +14,20 @@ $yellow: #E59500;
 
   .btn_email {
     flex-grow: 1;
+    padding: .5rem;
   }
 
   .btn_brand {
     margin-left: 2rem;
+    padding: .5rem;
   }
 
   @include media-breakpoint-up(md) {
     h2 {
       margin: 0;
+    }
+    .btn_brand, .btn_email {
+      padding: .85rem 2rem;
     }
   }
 }

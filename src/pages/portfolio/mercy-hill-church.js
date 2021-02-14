@@ -1,17 +1,14 @@
 import React from "react"
 import { Container, Row, Col } from 'react-bootstrap';
+import { graphql } from "gatsby"
+import Img from "gatsby-image"
 
 import PortfolioNav from '../../components/portfolio-nav.js'
 import PortfolioHeader from '../../components/portfolio-header'
 import PortfolioMoreProjects from "../../components/portfolio-more-projects";
 import Footer from '../../components/footer'
 
-import MercyHillBrief from '../../images/MercyHill_Brief.png'
-import MercyHillBanner from '../../images/mercy-hill_banner.png'
-import MercyHillPostcards from '../../images/mercy-hill_postcards.png'
-import MercyHillSlide from '../../images/mercy-hill_advent-mockup-tv.png'
-
-const MercyHill = () => {
+const MercyHill = ({ data }) => {
   return (
     <>
       <title>Stephanie Wiggins | Mercy Hill Church</title>
@@ -25,7 +22,7 @@ const MercyHill = () => {
       <Container>
         <Row className='align-items-center'>
           <Col md={6}>
-            <img src={MercyHillBrief} alt='Church' />
+            <Img fluid={data.MercyHillBrief.childImageSharp.fluid} fadeIn={false} alt="Church" />
           </Col>
           <Col md={6}>
             <h2 className="mb-2">The Brief.</h2>
@@ -34,7 +31,7 @@ const MercyHill = () => {
               After a fine arts jack of all trades staff member moved, Mercy Hill Church needed help with some print and digital collateral material. 
             </p>
             <p>
-              In relocating to a new building themselves, they needed a new yard banner to catch people's eye driving down a major road. Additionally, they requested collateral to support the day-to-day ministries of the church. These included magnets featuring ministries and initiatives as well as digital sermon and announcement slides.
+              Having recently relocated to a new building, they needed a yard banner to catch people's eye while driving down a major road. Additionally, they requested collateral to support the day-to-day ministries of the church. These included magnets featuring ministries and initiatives as well as digital sermon and announcement slides.
             </p>
           </Col>
         </Row>
@@ -42,15 +39,15 @@ const MercyHill = () => {
       <Container>
       <Row className='my-5'>
           <Col lg={{span:10, offset: 1}}>
-            <img src={MercyHillBanner} alt='Mercy Hill Yard Banner' />
+            <Img fluid={data.MercyHillBanner.childImageSharp.fluid} fadeIn={false} alt="Mercy Hill Yard Banner" />
           </Col>
         </Row>
         <Row className='my-5'>
           <Col lg={6}>
-            <img src={MercyHillPostcards} alt='Mercy Hill Magnets' className='mt-2'/>
+            <Img fluid={data.MercyHillPostcards.childImageSharp.fluid} fadeIn={false} alt="Mercy Hill Magnets" className='mt-2'/>
           </Col>
           <Col lg={6}>
-            <img src={MercyHillSlide} alt='Digital Slides' className='mt-2'/>
+            <Img fluid={data.MercyHillSlide.childImageSharp.fluid} fadeIn={false} alt="Digital Slides" className='mt-2'/>
           </Col>
         </Row>
       </Container>
@@ -62,3 +59,36 @@ const MercyHill = () => {
 }
 
 export default MercyHill;
+
+export const query = graphql`
+  query {
+    MercyHillBrief: file(relativePath: { eq: "MercyHill_Brief.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 700) {
+          ...GatsbyImageSharpFluid_noBase64
+        }
+      }
+    }
+    MercyHillBanner: file(relativePath: { eq: "mercy-hill_banner.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 700) {
+          ...GatsbyImageSharpFluid_noBase64
+        }
+      }
+    }
+    MercyHillPostcards: file(relativePath: { eq: "mercy-hill_postcards.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 700) {
+          ...GatsbyImageSharpFluid_noBase64
+        }
+      }
+    }
+    MercyHillSlide: file(relativePath: { eq: "mercy-hill_advent-mockup-tv.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 700) {
+          ...GatsbyImageSharpFluid_noBase64
+        }
+      }
+    }
+  }
+`
