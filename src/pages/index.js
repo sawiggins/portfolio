@@ -35,7 +35,7 @@ const IndexPage = ({ data }) => {
                 <br />
                 Stephanie Wiggins.
               </h1>
-              <h5 className="mt-3">designer &nbsp;&nbsp; &#38;&#38; &nbsp;&nbsp; developer &nbsp;&nbsp; &#38;&#38; &nbsp;&nbsp; marketer</h5>
+              <h5 className="mt-3">graphic designer &nbsp;&nbsp; &#38;&#38; &nbsp;&nbsp; web developer</h5>
             </Col>
             <Col xs={{span: 12, order: 1}} md={{span: 6, order: 2}}>
               <Img fluid={data.stephanieFeature.childImageSharp.fluid} fadeIn={false} alt="Stephanie Wiggins" />
@@ -54,12 +54,10 @@ const IndexPage = ({ data }) => {
               <p>
                 With graphic design, marketing, and web development skills, I weave my expertise 
                 triad with a project’s initiatives to create a user-centric, cohesive experience. 
-                I aim to create projects both that are beautiful and that people enjoy using. 
+                I aim to create projects that are both beautiful and enjoyable to use. 
               </p>
               <p>
-                With a round set of skills and experiences, I enjoy walking the user's journey, whether
-                helping them discover valuable content in your article they found at the top of Google to 
-                navigating them through your complex app. Afterwards, I cull data and analyze to understand
+                Using my well-rounded experience in UI design and development, I enjoy helping users discover valuable content in informative articles and navigate through complex applications. Afterwards, I cull data and analyze to understand
                 how an article or app is performing and how to enhance the next user's experience. 
               </p>
               <Button href={Resume}>Download My Resume</Button>
@@ -79,8 +77,8 @@ const IndexPage = ({ data }) => {
             <Col>
               <h3>St. Jude Cloud</h3>
               <p>
-                I am a UI/UX designer and developer for the St. Jude Cloud site, <a href="https://stjude.cloud" target="_blank" rel="noopener noreferrer" className="link-animate">stjude.cloud</a>. 
-                Specifically, I focus on the <a href="https://platform.stjude.cloud" target="_blank" rel="noopener noreferrer" className="link-animate">Genomics Platform</a> app, a ReactJS/Ruby on Rails site 
+                I am a UI/UX designer and web developer for the St. Jude Cloud website, <a href="https://stjude.cloud" target="_blank" rel="noopener noreferrer" className="link-animate">stjude.cloud</a>. 
+                Specifically, I focus on the <a href="https://platform.stjude.cloud" target="_blank" rel="noopener noreferrer" className="link-animate">Genomics Platform</a>, a ReactJS/Ruby on Rails application 
                 that shares raw genomics data and analysis tools with scientists globally.
               </p>
               <Button as={Link} to='portfolio/stjude-cloud'>Learn More</Button>
@@ -92,7 +90,7 @@ const IndexPage = ({ data }) => {
               <p>
                 I was a senior graphic designer and marketing associate for <a href="https://mercercapital.com" target="_blank" rel="noopener noreferrer" className="link-animate">Mercer Capital</a>, 
                 a business valuation and financial advisory firm. I designed for both digital and print mediums 
-                and supported marketing efforts across the firm. These initiatives spanned the content 
+                and supported marketing efforts across the firm. These initiatives spanned the entire content 
                 marketing process – from initial research and content creation to distribution and 
                 post-production analysis.
               </p>

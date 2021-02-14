@@ -15,7 +15,7 @@ const MercerCapital = ({ data }) => {
       <PortfolioNav />
       <PortfolioHeader
         title="Mercer Capital"
-        description='Being a business valuation and financial advisory firm outside of a major market afforded me the opportunity to help this content producing machine target their content well.'
+        description='Working for a business valuation and financial advisory firm outside of a major market afforded me the opportunity to help this content-producing machine target their content well.'
       />
       <Container>
         <Row className='align-items-center'>
@@ -51,7 +51,7 @@ const MercerCapital = ({ data }) => {
               One of the firm's seniors sought to launch a new service line targeting family business owners. 
             </p>
             <p>
-              We worked with him to identify existing clients and referral sources, understand the breath of personas, and pinpoint influencers. Equipped with this knowledge, we tested the waters with a series of LinkedIn posts to gage interaction. Given the positive feedback, he repurposed some of the blog posts into a book which we self-published through <a href="https://github.com/prawnpdf/prawn" target="_blank" rel="noopener noreferrer" className="link-animate">Lightning Source</a>. 
+              We worked with him to identify existing clients and referral sources, understand the breadth of personas, and pinpoint influencers. Equipped with this knowledge, we tested the waters with a series of LinkedIn posts to gauge interaction. Given the positive feedback, he repurposed some of the blog posts into a book which we self-published through <a href="https://github.com/prawnpdf/prawn" target="_blank" rel="noopener noreferrer" className="link-animate">Lightning Source</a>. 
             </p>
             <p>
               Given the momentum and bank of content, we launched a blog to more formally and intentionally direct our efforts. Prior to the launch, I performed market research surrounding our competition in the space and keyword analysis to direct content creation efforts. As part of the process, I mocked up posts, created corresponding social images and infographics, and sent emails campaigns.

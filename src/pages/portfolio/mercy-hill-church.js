@@ -31,7 +31,7 @@ const MercyHill = ({ data }) => {
               After a fine arts jack of all trades staff member moved, Mercy Hill Church needed help with some print and digital collateral material. 
             </p>
             <p>
-              In relocating to a new building themselves, they needed a new yard banner to catch people's eye driving down a major road. Additionally, they requested collateral to support the day-to-day ministries of the church. These included magnets featuring ministries and initiatives as well as digital sermon and announcement slides.
+              Having recently relocated to a new building, they needed a yard banner to catch people's eye while driving down a major road. Additionally, they requested collateral to support the day-to-day ministries of the church. These included magnets featuring ministries and initiatives as well as digital sermon and announcement slides.
             </p>
           </Col>
         </Row>
