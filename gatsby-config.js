@@ -1,3 +1,5 @@
+const path = require(`path`)
+
 module.exports = {
   plugins: [
     {
@@ -7,11 +9,12 @@ module.exports = {
       },
     },
     `gatsby-plugin-sass`,
+    `gatsby-transformer-sharp`, 
     `gatsby-plugin-sharp`, {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
-        path: `${__dirname}/src/images`,
+        path: path.join(__dirname, `src`, `images`),
       },
     },
     {

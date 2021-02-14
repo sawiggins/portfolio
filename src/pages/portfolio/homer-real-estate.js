@@ -1,16 +1,14 @@
 import React from "react"
 import { Container, Row, Col } from 'react-bootstrap';
+import { graphql } from "gatsby"
+import Img from "gatsby-image"
 
 import PortfolioNav from '../../components/portfolio-nav.js'
 import PortfolioHeader from '../../components/portfolio-header'
 import PortfolioMoreProjects from "../../components/portfolio-more-projects";
 import Footer from '../../components/footer'
 
-import HomerBrief from '../../images/homer_feature.png'
-import HomerYardSign from '../../images/Homer_Yard-Sign.png'
-import HomerLogos from '../../images/Homer_Logos.jpg'
-
-const HomerRealEstate = () => {
+const HomerRealEstate = ({ data }) => {
   return (
     <>
       <title>Stephanie Wiggins | Homer Real Estate</title>
@@ -22,7 +20,7 @@ const HomerRealEstate = () => {
       <Container>
         <Row className='align-items-center'>
           <Col md={6}>
-            <img src={HomerBrief} alt='Real Estate' />
+            <Img fluid={data.HomerBrief.childImageSharp.fluid} fadeIn={false} alt="Real Estate" />
           </Col>
           <Col md={6}>
             <h2 className="mb-2">The Brief.</h2>
@@ -43,12 +41,12 @@ const HomerRealEstate = () => {
       <Container>
         <Row className='my-5'>
           <Col lg={{span:10, offset: 1}}>
-            <img src={HomerYardSign} alt='Homer Real Estate Yard Sign' />
+            <Img fluid={data.HomerYardSign.childImageSharp.fluid} fadeIn={false} alt="Homer Real Estate Yard Sign" />
           </Col>
         </Row>
         <Row className='my-5'>
         <Col lg={{span:10, offset: 1}}>
-            <img src={HomerLogos} alt='Homer Real Estate Logos' />
+            <Img fluid={data.HomerLogos.childImageSharp.fluid} fadeIn={false} alt="Homer Real Estate Logos" />
           </Col>
         </Row>
       </Container>
@@ -59,3 +57,29 @@ const HomerRealEstate = () => {
 }
 
 export default HomerRealEstate;
+
+export const query = graphql`
+  query {
+    HomerBrief: file(relativePath: { eq: "homer_feature.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 700) {
+          ...GatsbyImageSharpFluid_noBase64
+        }
+      }
+    }
+    HomerYardSign: file(relativePath: { eq: "Homer_Yard-Sign.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 700) {
+          ...GatsbyImageSharpFluid_noBase64
+        }
+      }
+    }
+    HomerLogos: file(relativePath: { eq: "Homer_Logos.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 700) {
+          ...GatsbyImageSharpFluid_noBase64
+        }
+      }
+    }
+  }
+`

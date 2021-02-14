@@ -1,17 +1,14 @@
 import React from "react"
 import { Container, Row, Col } from 'react-bootstrap';
+import { graphql } from "gatsby"
+import Img from "gatsby-image"
 
 import PortfolioNav from '../../components/portfolio-nav.js'
 import PortfolioHeader from '../../components/portfolio-header'
 import PortfolioMoreProjects from "../../components/portfolio-more-projects";
 import Footer from '../../components/footer'
 
-import SJCBrief from '../../images/sjc_brief.png'
-import SJCPlatform from '../../images/sjc_platform.png'
-import SJCWizard from '../../images/sjc_edaa-wizard.png'
-import SJCUXWizard from '../../images/sjc_ux-wizard.png'
-
-const StJudeCloud = () => {
+const StJudeCloud = ({ data }) => {
   return (
     <>
       <title>Stephanie Wiggins | St. Jude Cloud</title>
@@ -23,7 +20,7 @@ const StJudeCloud = () => {
       <Container>
         <Row className='align-items-center'>
           <Col md={6}>
-            <img src={SJCBrief} alt='Cells' />
+            <Img fluid={data.SJCBrief.childImageSharp.fluid} fadeIn={false} alt="cells" />
           </Col>
           <Col md={6}>
             <h2 className="mb-2">The Brief.</h2>
@@ -41,7 +38,7 @@ const StJudeCloud = () => {
       <Container>
         <Row className='my-5'>
           <Col lg={{span:10, offset: 1}}>
-            <img src={SJCPlatform} alt='Genomics Platform Homepage' />
+            <Img fluid={data.SJCPlatform.childImageSharp.fluid} fadeIn={false} alt="St. Jude Cloud Genomics Platform Homepage"/>
           </Col>
         </Row>
         <Row className="">
@@ -63,10 +60,10 @@ const StJudeCloud = () => {
         </Row>
         <Row className='my-5'>
           <Col lg={8} className='mt-2'>
-            <img src={SJCWizard} alt='EDAA Mockup' />
+            <Img fluid={data.SJCWizard.childImageSharp.fluid} fadeIn={false} alt="St. Jude Cloud EDAA Wizard"/>
           </Col>
           <Col lg={4} className='mt-2'>
-            <img src={SJCUXWizard} alt='UX Flow' />
+            <Img fluid={data.SJCUXWizard.childImageSharp.fluid} fadeIn={false} alt="St. Jude Cloud UX Flow"/>
           </Col>
         </Row>
       </Container>
@@ -77,3 +74,36 @@ const StJudeCloud = () => {
 }
 
 export default StJudeCloud;
+
+export const query = graphql`
+  query {
+    SJCBrief: file(relativePath: { eq: "sjc_brief.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 700) {
+          ...GatsbyImageSharpFluid_noBase64
+        }
+      }
+    }
+    SJCPlatform: file(relativePath: { eq: "sjc_platform.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 700) {
+          ...GatsbyImageSharpFluid_noBase64
+        }
+      }
+    }
+    SJCWizard: file(relativePath: { eq: "sjc_edaa-wizard.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 700) {
+          ...GatsbyImageSharpFluid_noBase64
+        }
+      }
+    }
+    SJCUXWizard: file(relativePath: { eq: "sjc_ux-wizard.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 700) {
+          ...GatsbyImageSharpFluid_noBase64
+        }
+      }
+    }
+  }
+`

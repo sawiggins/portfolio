@@ -1,20 +1,14 @@
 import React from "react"
 import { Container, Row, Col } from 'react-bootstrap';
+import { graphql } from "gatsby"
+import Img from "gatsby-image"
 
 import PortfolioNav from '../../components/portfolio-nav.js'
 import PortfolioHeader from '../../components/portfolio-header'
 import PortfolioMoreProjects from "../../components/portfolio-more-projects";
 import Footer from '../../components/footer'
 
-import MSCABrief from '../../images/msca_feature.png'
-import MSCAAssets from '../../images/msca_assets.png'
-import MSCALogo from '../../images/msca_logo-tall.png'
-import MSCAPhoto from '../../images/msca_group.png'
-import MSCAStylescape from '../../images/msca_stylescape.png'
-import MSCAWebsite from '../../images/msca_website.png'
-
-
-const MSCA = () => {
+const MSCA = ({ data }) => {
   return (
     <>
     <title>Stephanie Wiggins | Mid-South Culinary Alliance</title>
@@ -26,7 +20,7 @@ const MSCA = () => {
       <Container>
         <Row className='align-items-center'>
           <Col md={6}>
-            <img src={MSCABrief} alt='Food' />
+            <Img fluid={data.MSCABrief.childImageSharp.fluid} fadeIn={false} alt="Food" />
           </Col>
           <Col md={6}>
             <h2 className="mb-2">The Brief.</h2>
@@ -43,21 +37,21 @@ const MSCA = () => {
       <Container>
       <Row className='my-5'>
           <Col>
-            <img src={MSCAStylescape} alt='MSCA Style Guide' />
+            <Img fluid={data.MSCAStylescape.childImageSharp.fluid} fadeIn={false} alt="MSCA Style Guide" />
           </Col>
         </Row>
         <Row className='my-5'>
           <Col lg={{span: 4, offset: 2}}>
-            <img src={MSCALogo} alt='MSCA Logo' className='mt-2'/>
+            <Img fluid={data.MSCALogo.childImageSharp.fluid} fadeIn={false} alt="MSCA Logo" />
           </Col>
           <Col lg={4} className="d-flex flex-column justify-content-between">
-            <img src={MSCAAssets} alt='Texture and Icons' className='mt-2'/>
-            <img src={MSCAPhoto} alt='MSCA Students and Chef' className='mt-2'/>
+            <Img fluid={data.MSCAAssets.childImageSharp.fluid} fadeIn={false} className='mt-2' alt="MSCA Students and Chef" />
+            <Img fluid={data.MSCAPhoto.childImageSharp.fluid} fadeIn={false} className='mt-2' alt="MSCA Students and Chef" />
           </Col>
         </Row>
         <Row className='my-5'>
           <Col>
-            <img src={MSCAWebsite} alt='MSCA Website' />
+            <Img fluid={data.MSCAWebsite.childImageSharp.fluid} fadeIn={false} alt="MSCA Website" />
           </Col>
         </Row>
       </Container>
@@ -69,3 +63,50 @@ const MSCA = () => {
 }
 
 export default MSCA;
+
+export const query = graphql`
+  query {
+    MSCABrief: file(relativePath: { eq: "msca_feature.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 700) {
+          ...GatsbyImageSharpFluid_noBase64
+        }
+      }
+    }
+    MSCAStylescape: file(relativePath: { eq: "msca_stylescape.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 700) {
+          ...GatsbyImageSharpFluid_noBase64
+        }
+      }
+    }
+    MSCALogo: file(relativePath: { eq: "msca_logo-tall.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 700) {
+          ...GatsbyImageSharpFluid_noBase64
+        }
+      }
+    }
+    MSCAAssets: file(relativePath: { eq: "msca_assets.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 700) {
+          ...GatsbyImageSharpFluid_noBase64
+        }
+      }
+    }
+    MSCAPhoto: file(relativePath: { eq: "msca_group.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 700) {
+          ...GatsbyImageSharpFluid_noBase64
+        }
+      }
+    }
+    MSCAWebsite: file(relativePath: { eq: "msca_website.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 700) {
+          ...GatsbyImageSharpFluid_noBase64
+        }
+      }
+    }
+  }
+`
