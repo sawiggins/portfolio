@@ -29,7 +29,7 @@ const MSCA = ({ data }) => {
             In February 2020, I volunteered with AIGA’s Design for Good in order to provide a styleguide, logo, and mock-ups to be used later that month at <a href="https://www.givecampmemphis.org/" target="_blank" rel="noopener noreferrer" className="link-animate">GiveCamp Memphis</a>. At GiveCamp our team built out a website, a Salesforce org, and learning management system for the nonprofit. 
             </p>
             <p>
-            The goal of the visual identity was to capture both energy that would appeal to youth looking to enter the program and sophistication to appeal to donors looking to partner with the organization. The cornerstone of the project was the logo that captures the lead chef mentoring two students as represented by the three chef hats. 
+            The goal of the visual identity was to capture both energy that would appeal to youth and sophistication that would appeal to donors. The cornerstone of the project was the logo – the lead chef mentoring two students as represented by the three chef hats. 
             </p>
           </Col>
         </Row>
