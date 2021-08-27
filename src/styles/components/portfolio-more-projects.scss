@@ -15,13 +15,15 @@ $yellow: #E59500;
     .projects-box {
       background-color: $navy;
       border: 2px $yellow solid; 
+      max-width: 850px;
       padding: 4rem 12rem;
     }
     .row__more-projects {
       background-image: url('../images/portfolio_more-projects.png');
       background-repeat: no-repeat;
-      background-size: 950px;
-      padding: 3.5rem 0;
+      background-position: center;
+      text-align: center;
+      padding: 4rem 0;
     }
   }
 

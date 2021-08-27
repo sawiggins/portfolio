@@ -38,8 +38,10 @@ img {
 
 .nav-link {
   font-family: 'Aleo', sans-serif, Arial;
-  margin-left: 1rem;
-  margin-right: 1rem;
+
+  &:hover {
+    color: $yellow;
+  }
 }
 
 $underlineColor: $yellow;
