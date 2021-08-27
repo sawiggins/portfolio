@@ -35,7 +35,7 @@ const IndexPage = ({ data }) => {
                 <br />
                 Stephanie Wiggins.
               </h1>
-              <h5 className="mt-3">graphic designer &nbsp;&nbsp; &#38;&#38; &nbsp;&nbsp; web developer</h5>
+              <h5 className="mt-3">ux/ui designer &nbsp;&nbsp; &#38;&#38; &nbsp;&nbsp; web developer</h5>
             </Col>
             <Col xs={{span: 12, order: 1}} md={{span: 6, order: 2}}>
               <Img fluid={data.stephanieFeature.childImageSharp.fluid} fadeIn={false} alt="Stephanie Wiggins" />
@@ -53,7 +53,7 @@ const IndexPage = ({ data }) => {
               <h2>Analytical yet Creative.</h2>
               <p>
                 With graphic design, marketing, and web development skills, I weave my expertise 
-                triad with a project’s initiatives to create a user-centric, cohesive experience. 
+                with a project’s initiatives to create a user-centric, cohesive experience. 
                 I aim to create projects that are both beautiful and enjoyable to use. 
               </p>
               <p>
