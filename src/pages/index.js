@@ -143,7 +143,7 @@ const IndexPage = ({ data }) => {
                 href="https://www.linkedin.com/in/wigginsstephanie/"
                 title="LinkedIn"
                 alt="LinkedIn"
-                className="btn_brand mr-2 py-3"
+                className="btn_brand me-2 py-3"
               >
                 <FontAwesomeIcon
                   icon={["fab", "linkedin-in"]}
