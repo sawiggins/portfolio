@@ -1,7 +1,7 @@
 import React from "react"
 import { Container, Row, Col } from 'react-bootstrap';
 import { graphql } from "gatsby"
-import Img from "gatsby-image"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 import PortfolioNav from '../../components/portfolio-nav.js'
 import PortfolioHeader from '../../components/portfolio-header'
@@ -20,7 +20,7 @@ const MercerCapital = ({ data }) => {
       <Container>
         <Row className='align-items-center'>
           <Col md={6}>
-            <Img fluid={data.MercerBrief.childImageSharp.fluid} fadeIn={false} alt="Mercer Capital Feature of Dollar Signs" />
+            <GatsbyImage image={getImage(data.MercerBrief)} alt="Mercer Capital Feature of Dollar Signs" />
           </Col>
           <Col md={6}>
             <h2 className="mb-2">The Brief.</h2>
@@ -38,7 +38,7 @@ const MercerCapital = ({ data }) => {
       <Container>
         <Row className='my-5'>
           <Col lg={{span:10, offset: 1}}>
-            <Img fluid={data.MercerNewsletters.childImageSharp.fluid} fadeIn={false} alt="Mercer Capital Newsletters" />
+            <GatsbyImage image={getImage(data.MercerNewsletters)} alt="Mercer Capital Newsletters" />
           </Col>
         </Row>
         <Row>
@@ -63,11 +63,11 @@ const MercerCapital = ({ data }) => {
         </Row>
         <Row className='my-5'>
           <Col lg={5} className="d-flex flex-column justify-content-between">
-            <Img fluid={data.MercerSocial.childImageSharp.fluid} fadeIn={false} className='mt-2' alt="Social Graphic for Book" />
-            <Img fluid={data.MercerInfographic.childImageSharp.fluid} fadeIn={false} className='mt-2' alt="Infographic" />
+            <GatsbyImage image={getImage(data.MercerSocial)} className='mt-2' alt="Social Graphic for Book" />
+            <GatsbyImage image={getImage(data.MercerInfographic)} className='mt-2' alt="Infographic" />
           </Col>
           <Col lg={7}>
-            <Img fluid={data.MercerBlog.childImageSharp.fluid} fadeIn={false} alt="Mercer Capital Blog" className='mt-2'/>
+            <GatsbyImage image={getImage(data.MercerBlog)} alt="Mercer Capital Blog" className='mt-2'/>
           </Col>
         </Row>
       </Container>
@@ -83,37 +83,27 @@ export const query = graphql`
   query {
     MercerBrief: file(relativePath: { eq: "mercer_feature.png" }) {
       childImageSharp {
-        fluid(maxWidth: 700) {
-          ...GatsbyImageSharpFluid_noBase64
-        }
+        gatsbyImageData(width: 700, placeholder: NONE, layout: CONSTRAINED)
       }
     }
     MercerNewsletters: file(relativePath: { eq: "mercer_newsletters.png" }) {
       childImageSharp {
-        fluid(maxWidth: 700) {
-          ...GatsbyImageSharpFluid_noBase64
-        }
+        gatsbyImageData(width: 700, placeholder: NONE, layout: CONSTRAINED)
       }
     }
     MercerSocial: file(relativePath: { eq: "mercer_book-social.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 700) {
-          ...GatsbyImageSharpFluid_noBase64
-        }
+        gatsbyImageData(width: 700, placeholder: NONE, layout: CONSTRAINED)
       }
     }
     MercerInfographic: file(relativePath: { eq: "mercer_infographic.png" }) {
       childImageSharp {
-        fluid(maxWidth: 700) {
-          ...GatsbyImageSharpFluid_noBase64
-        }
+        gatsbyImageData(width: 700, placeholder: NONE, layout: CONSTRAINED)
       }
     }
     MercerBlog: file(relativePath: { eq: "mercer_fbd-blog.png" }) {
       childImageSharp {
-        fluid(maxWidth: 700) {
-          ...GatsbyImageSharpFluid_noBase64
-        }
+        gatsbyImageData(width: 700, placeholder: NONE, layout: CONSTRAINED)
       }
     }
   }

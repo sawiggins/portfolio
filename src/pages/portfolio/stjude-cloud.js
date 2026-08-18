@@ -1,7 +1,7 @@
 import React from "react"
 import { Container, Row, Col } from 'react-bootstrap';
 import { graphql } from "gatsby"
-import Img from "gatsby-image"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 import PortfolioNav from '../../components/portfolio-nav.js'
 import PortfolioHeader from '../../components/portfolio-header'
@@ -20,7 +20,7 @@ const StJudeCloud = ({ data }) => {
       <Container>
         <Row className='align-items-center'>
           <Col md={6}>
-            <Img fluid={data.SJCBrief.childImageSharp.fluid} fadeIn={false} alt="cells" />
+            <GatsbyImage image={getImage(data.SJCBrief)} alt="cells" />
           </Col>
           <Col md={6}>
             <h2 className="mb-2">The Brief.</h2>
@@ -38,7 +38,7 @@ const StJudeCloud = ({ data }) => {
       <Container>
         <Row className='my-5'>
           <Col lg={{span:10, offset: 1}}>
-            <Img fluid={data.SJCPlatform.childImageSharp.fluid} fadeIn={false} alt="St. Jude Cloud Genomics Platform Homepage"/>
+            <GatsbyImage image={getImage(data.SJCPlatform)} alt="St. Jude Cloud Genomics Platform Homepage"/>
           </Col>
         </Row>
         <Row className="">
@@ -60,10 +60,10 @@ const StJudeCloud = ({ data }) => {
         </Row>
         <Row className='my-5'>
           <Col lg={8} className='mt-2'>
-            <Img fluid={data.SJCWizard.childImageSharp.fluid} fadeIn={false} alt="St. Jude Cloud EDAA Wizard"/>
+            <GatsbyImage image={getImage(data.SJCWizard)} alt="St. Jude Cloud EDAA Wizard"/>
           </Col>
           <Col lg={4} className='mt-2'>
-            <Img fluid={data.SJCUXWizard.childImageSharp.fluid} fadeIn={false} alt="St. Jude Cloud UX Flow"/>
+            <GatsbyImage image={getImage(data.SJCUXWizard)} alt="St. Jude Cloud UX Flow"/>
           </Col>
         </Row>
       </Container>
@@ -79,30 +79,22 @@ export const query = graphql`
   query {
     SJCBrief: file(relativePath: { eq: "sjc_brief.png" }) {
       childImageSharp {
-        fluid(maxWidth: 700) {
-          ...GatsbyImageSharpFluid_noBase64
-        }
+        gatsbyImageData(width: 700, placeholder: NONE, layout: CONSTRAINED)
       }
     }
     SJCPlatform: file(relativePath: { eq: "sjc_platform.png" }) {
       childImageSharp {
-        fluid(maxWidth: 700) {
-          ...GatsbyImageSharpFluid_noBase64
-        }
+        gatsbyImageData(width: 700, placeholder: NONE, layout: CONSTRAINED)
       }
     }
     SJCWizard: file(relativePath: { eq: "sjc_edaa-wizard.png" }) {
       childImageSharp {
-        fluid(maxWidth: 700) {
-          ...GatsbyImageSharpFluid_noBase64
-        }
+        gatsbyImageData(width: 700, placeholder: NONE, layout: CONSTRAINED)
       }
     }
     SJCUXWizard: file(relativePath: { eq: "sjc_ux-wizard.png" }) {
       childImageSharp {
-        fluid(maxWidth: 700) {
-          ...GatsbyImageSharpFluid_noBase64
-        }
+        gatsbyImageData(width: 700, placeholder: NONE, layout: CONSTRAINED)
       }
     }
   }

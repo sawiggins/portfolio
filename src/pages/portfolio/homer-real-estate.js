@@ -1,7 +1,7 @@
 import React from "react"
 import { Container, Row, Col } from 'react-bootstrap';
 import { graphql } from "gatsby"
-import Img from "gatsby-image"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 import PortfolioNav from '../../components/portfolio-nav.js'
 import PortfolioHeader from '../../components/portfolio-header'
@@ -20,7 +20,7 @@ const HomerRealEstate = ({ data }) => {
       <Container>
         <Row className='align-items-center'>
           <Col md={6}>
-            <Img fluid={data.HomerBrief.childImageSharp.fluid} fadeIn={false} alt="Real Estate" />
+            <GatsbyImage image={getImage(data.HomerBrief)} alt="Real Estate" />
           </Col>
           <Col md={6}>
             <h2 className="mb-2">The Brief.</h2>
@@ -41,12 +41,12 @@ const HomerRealEstate = ({ data }) => {
       <Container>
         <Row className='my-5'>
           <Col lg={{span:10, offset: 1}}>
-            <Img fluid={data.HomerYardSign.childImageSharp.fluid} fadeIn={false} alt="Homer Real Estate Yard Sign" />
+            <GatsbyImage image={getImage(data.HomerYardSign)} alt="Homer Real Estate Yard Sign" />
           </Col>
         </Row>
         <Row className='my-5'>
         <Col lg={{span:10, offset: 1}}>
-            <Img fluid={data.HomerLogos.childImageSharp.fluid} fadeIn={false} alt="Homer Real Estate Logos" />
+            <GatsbyImage image={getImage(data.HomerLogos)} alt="Homer Real Estate Logos" />
           </Col>
         </Row>
       </Container>
@@ -62,23 +62,17 @@ export const query = graphql`
   query {
     HomerBrief: file(relativePath: { eq: "homer_feature.png" }) {
       childImageSharp {
-        fluid(maxWidth: 700) {
-          ...GatsbyImageSharpFluid_noBase64
-        }
+        gatsbyImageData(width: 700, placeholder: NONE, layout: CONSTRAINED)
       }
     }
     HomerYardSign: file(relativePath: { eq: "Homer_Yard-Sign.png" }) {
       childImageSharp {
-        fluid(maxWidth: 700) {
-          ...GatsbyImageSharpFluid_noBase64
-        }
+        gatsbyImageData(width: 700, placeholder: NONE, layout: CONSTRAINED)
       }
     }
     HomerLogos: file(relativePath: { eq: "Homer_Logos.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 700) {
-          ...GatsbyImageSharpFluid_noBase64
-        }
+        gatsbyImageData(width: 700, placeholder: NONE, layout: CONSTRAINED)
       }
     }
   }

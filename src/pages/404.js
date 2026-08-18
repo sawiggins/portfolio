@@ -1,7 +1,7 @@
 import * as React from "react"
 import { Container, Row, Col } from "react-bootstrap"
 import { graphql, Link } from "gatsby"
-import Img from "gatsby-image"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 const NotFoundPage = ({ data }) => {
   return (
@@ -10,7 +10,7 @@ const NotFoundPage = ({ data }) => {
     <Container>
       <Row>
       <Col md={5}>
-        <Img fluid={data.EmptyCoffeeCup.childImageSharp.fluid} fadeIn={false} alt="Church" />
+        <GatsbyImage image={getImage(data.EmptyCoffeeCup)} alt="Church" />
       </Col>
       <Col md={{span: 5, offset: 1}} className="d-flex flex-column justify-content-center">
         <h1>404.</h1>
@@ -40,9 +40,7 @@ export const query = graphql`
   query {
     EmptyCoffeeCup: file(relativePath: { eq: "404.png" }) {
       childImageSharp {
-        fluid(maxWidth: 700) {
-          ...GatsbyImageSharpFluid_noBase64
-        }
+        gatsbyImageData(width: 700, placeholder: NONE, layout: CONSTRAINED)
       }
     }
   }

@@ -1,7 +1,7 @@
 import React from "react"
 import { Container, Row, Col } from 'react-bootstrap';
 import { graphql } from "gatsby"
-import Img from "gatsby-image"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 import PortfolioNav from '../../components/portfolio-nav.js'
 import PortfolioHeader from '../../components/portfolio-header'
@@ -20,7 +20,7 @@ const MSCA = ({ data }) => {
       <Container>
         <Row className='align-items-center'>
           <Col md={6}>
-            <Img fluid={data.MSCABrief.childImageSharp.fluid} fadeIn={false} alt="Food" />
+            <GatsbyImage image={getImage(data.MSCABrief)} alt="Food" />
           </Col>
           <Col md={6}>
             <h2 className="mb-2">The Brief.</h2>
@@ -37,21 +37,21 @@ const MSCA = ({ data }) => {
       <Container>
       <Row className='my-5'>
           <Col>
-            <Img fluid={data.MSCAStylescape.childImageSharp.fluid} fadeIn={false} alt="MSCA Style Guide" />
+            <GatsbyImage image={getImage(data.MSCAStylescape)} alt="MSCA Style Guide" />
           </Col>
         </Row>
         <Row className='my-5'>
           <Col lg={{span: 4, offset: 2}}>
-            <Img fluid={data.MSCALogo.childImageSharp.fluid} fadeIn={false} alt="MSCA Logo" />
+            <GatsbyImage image={getImage(data.MSCALogo)} alt="MSCA Logo" />
           </Col>
           <Col lg={4} className="d-flex flex-column justify-content-between">
-            <Img fluid={data.MSCAAssets.childImageSharp.fluid} fadeIn={false} className='mt-2' alt="MSCA Students and Chef" />
-            <Img fluid={data.MSCAPhoto.childImageSharp.fluid} fadeIn={false} className='mt-2' alt="MSCA Students and Chef" />
+            <GatsbyImage image={getImage(data.MSCAAssets)} className='mt-2' alt="MSCA Students and Chef" />
+            <GatsbyImage image={getImage(data.MSCAPhoto)} className='mt-2' alt="MSCA Students and Chef" />
           </Col>
         </Row>
         <Row className='my-5'>
           <Col>
-            <Img fluid={data.MSCAWebsite.childImageSharp.fluid} fadeIn={false} alt="MSCA Website" />
+            <GatsbyImage image={getImage(data.MSCAWebsite)} alt="MSCA Website" />
           </Col>
         </Row>
       </Container>
@@ -68,44 +68,32 @@ export const query = graphql`
   query {
     MSCABrief: file(relativePath: { eq: "msca_feature.png" }) {
       childImageSharp {
-        fluid(maxWidth: 700) {
-          ...GatsbyImageSharpFluid_noBase64
-        }
+        gatsbyImageData(width: 700, placeholder: NONE, layout: CONSTRAINED)
       }
     }
     MSCAStylescape: file(relativePath: { eq: "msca_stylescape.png" }) {
       childImageSharp {
-        fluid(maxWidth: 700) {
-          ...GatsbyImageSharpFluid_noBase64
-        }
+        gatsbyImageData(width: 700, placeholder: NONE, layout: CONSTRAINED)
       }
     }
     MSCALogo: file(relativePath: { eq: "msca_logo-tall.png" }) {
       childImageSharp {
-        fluid(maxWidth: 700) {
-          ...GatsbyImageSharpFluid_noBase64
-        }
+        gatsbyImageData(width: 700, placeholder: NONE, layout: CONSTRAINED)
       }
     }
     MSCAAssets: file(relativePath: { eq: "msca_assets.png" }) {
       childImageSharp {
-        fluid(maxWidth: 700) {
-          ...GatsbyImageSharpFluid_noBase64
-        }
+        gatsbyImageData(width: 700, placeholder: NONE, layout: CONSTRAINED)
       }
     }
     MSCAPhoto: file(relativePath: { eq: "msca_group.png" }) {
       childImageSharp {
-        fluid(maxWidth: 700) {
-          ...GatsbyImageSharpFluid_noBase64
-        }
+        gatsbyImageData(width: 700, placeholder: NONE, layout: CONSTRAINED)
       }
     }
     MSCAWebsite: file(relativePath: { eq: "msca_website.png" }) {
       childImageSharp {
-        fluid(maxWidth: 700) {
-          ...GatsbyImageSharpFluid_noBase64
-        }
+        gatsbyImageData(width: 700, placeholder: NONE, layout: CONSTRAINED)
       }
     }
   }

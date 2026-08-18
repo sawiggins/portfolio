@@ -1,7 +1,7 @@
 import React from "react"
 import { Container, Row, Col } from 'react-bootstrap';
 import { graphql } from "gatsby"
-import Img from "gatsby-image"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 import PortfolioNav from '../../components/portfolio-nav.js'
 import PortfolioHeader from '../../components/portfolio-header'
@@ -22,7 +22,7 @@ const MercyHill = ({ data }) => {
       <Container>
         <Row className='align-items-center'>
           <Col md={6}>
-            <Img fluid={data.MercyHillBrief.childImageSharp.fluid} fadeIn={false} alt="Church" />
+            <GatsbyImage image={getImage(data.MercyHillBrief)} alt="Church" />
           </Col>
           <Col md={6}>
             <h2 className="mb-2">The Brief.</h2>
@@ -39,15 +39,15 @@ const MercyHill = ({ data }) => {
       <Container>
       <Row className='my-5'>
           <Col lg={{span:10, offset: 1}}>
-            <Img fluid={data.MercyHillBanner.childImageSharp.fluid} fadeIn={false} alt="Mercy Hill Yard Banner" />
+            <GatsbyImage image={getImage(data.MercyHillBanner)} alt="Mercy Hill Yard Banner" />
           </Col>
         </Row>
         <Row className='my-5'>
           <Col lg={6}>
-            <Img fluid={data.MercyHillPostcards.childImageSharp.fluid} fadeIn={false} alt="Mercy Hill Magnets" className='mt-2'/>
+            <GatsbyImage image={getImage(data.MercyHillPostcards)} alt="Mercy Hill Magnets" className='mt-2'/>
           </Col>
           <Col lg={6}>
-            <Img fluid={data.MercyHillSlide.childImageSharp.fluid} fadeIn={false} alt="Digital Slides" className='mt-2'/>
+            <GatsbyImage image={getImage(data.MercyHillSlide)} alt="Digital Slides" className='mt-2'/>
           </Col>
         </Row>
       </Container>
@@ -64,30 +64,22 @@ export const query = graphql`
   query {
     MercyHillBrief: file(relativePath: { eq: "MercyHill_Brief.png" }) {
       childImageSharp {
-        fluid(maxWidth: 700) {
-          ...GatsbyImageSharpFluid_noBase64
-        }
+        gatsbyImageData(width: 700, placeholder: NONE, layout: CONSTRAINED)
       }
     }
     MercyHillBanner: file(relativePath: { eq: "mercy-hill_banner.png" }) {
       childImageSharp {
-        fluid(maxWidth: 700) {
-          ...GatsbyImageSharpFluid_noBase64
-        }
+        gatsbyImageData(width: 700, placeholder: NONE, layout: CONSTRAINED)
       }
     }
     MercyHillPostcards: file(relativePath: { eq: "mercy-hill_postcards.png" }) {
       childImageSharp {
-        fluid(maxWidth: 700) {
-          ...GatsbyImageSharpFluid_noBase64
-        }
+        gatsbyImageData(width: 700, placeholder: NONE, layout: CONSTRAINED)
       }
     }
     MercyHillSlide: file(relativePath: { eq: "mercy-hill_advent-mockup-tv.png" }) {
       childImageSharp {
-        fluid(maxWidth: 700) {
-          ...GatsbyImageSharpFluid_noBase64
-        }
+        gatsbyImageData(width: 700, placeholder: NONE, layout: CONSTRAINED)
       }
     }
   }
