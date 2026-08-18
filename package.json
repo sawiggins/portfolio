@@ -12,6 +12,9 @@
     "react",
     "rails"
   ],
+  "engines": {
+    "node": ">=18.0.0 <26"
+  },
   "scripts": {
     "develop": "gatsby develop",
     "start": "gatsby develop",
