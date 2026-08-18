@@ -6,7 +6,6 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image"
 const NotFoundPage = ({ data }) => {
   return (
     <main className='d-flex align-items-center full-height'>
-      <title>Not found</title>
     <Container>
       <Row>
       <Col md={5}>
@@ -45,3 +44,5 @@ export const query = graphql`
     }
   }
 `
+
+export const Head = () => <title>Not found</title>

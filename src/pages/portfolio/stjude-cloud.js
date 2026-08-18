@@ -11,7 +11,6 @@ import Footer from '../../components/footer'
 const StJudeCloud = ({ data }) => {
   return (
     <>
-      <title>Stephanie Wiggins | St. Jude Cloud</title>
       <PortfolioNav />
       <PortfolioHeader
         title="St. Jude Cloud"
@@ -99,3 +98,5 @@ export const query = graphql`
     }
   }
 `
+
+export const Head = () => <title>Stephanie Wiggins | St. Jude Cloud</title>

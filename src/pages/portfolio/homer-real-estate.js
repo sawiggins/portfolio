@@ -11,7 +11,6 @@ import Footer from '../../components/footer'
 const HomerRealEstate = ({ data }) => {
   return (
     <>
-      <title>Stephanie Wiggins | Homer Real Estate</title>
       <PortfolioNav />
       <PortfolioHeader
         title="Homer Real Estate"
@@ -77,3 +76,5 @@ export const query = graphql`
     }
   }
 `
+
+export const Head = () => <title>Stephanie Wiggins | Homer Real Estate</title>

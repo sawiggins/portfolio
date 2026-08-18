@@ -11,7 +11,6 @@ import Footer from '../../components/footer'
 const MercyHill = ({ data }) => {
   return (
     <>
-      <title>Stephanie Wiggins | Mercy Hill Church</title>
 
       <PortfolioNav />
       
@@ -84,3 +83,5 @@ export const query = graphql`
     }
   }
 `
+
+export const Head = () => <title>Stephanie Wiggins | Mercy Hill Church</title>

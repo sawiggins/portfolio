@@ -11,7 +11,6 @@ import Footer from '../../components/footer'
 const MSCA = ({ data }) => {
   return (
     <>
-    <title>Stephanie Wiggins | Mid-South Culinary Alliance</title>
       <PortfolioNav />
       <PortfolioHeader
         title="Mid-South Culinary Alliance"
@@ -98,3 +97,5 @@ export const query = graphql`
     }
   }
 `
+
+export const Head = () => <title>Stephanie Wiggins | Mid-South Culinary Alliance</title>

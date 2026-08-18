@@ -11,7 +11,6 @@ import Footer from '../../components/footer'
 const MercerCapital = ({ data }) => {
   return (
     <>
-      <title>Stephanie Wiggins | Mercer Capital</title>
       <PortfolioNav />
       <PortfolioHeader
         title="Mercer Capital"
@@ -108,3 +107,5 @@ export const query = graphql`
     }
   }
 `
+
+export const Head = () => <title>Stephanie Wiggins | Mercer Capital</title>

@@ -22,7 +22,6 @@ library.add(
 const IndexPage = ({ data }) => {
   return (
     <main>
-      <title>Stephanie Wiggins</title>
 
       <SiteNav />
 
@@ -201,3 +200,5 @@ export const query = graphql`
     }
   }
 `
+
+export const Head = () => <title>Stephanie Wiggins</title>
