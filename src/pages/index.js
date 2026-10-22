@@ -11,7 +11,6 @@ import SiteNav from '../components/nav.js'
 import HomerSign from '../images/homer_yard-sign-home.png'
 import MSCAWebsite from '../images/msca_website-homepage.png'
 import MercyHillBanner from '../images/mercy-hill_banner-homepage.png'
-import Resume from '../downloads/Stephanie-Wiggins_Resume.pdf'
 
 library.add(
   fab,
@@ -59,7 +58,6 @@ const IndexPage = ({ data }) => {
                 I'm excited about how AI is changing what's possible in product development, creating new opportunities
                 to experiment, iterate quickly, and bring ideas to life.
               </p>
-              <Button href={Resume}>Download My Resume</Button>
             </Col>
           </Row>
         </Container>
@@ -70,7 +68,10 @@ const IndexPage = ({ data }) => {
             <h2>Projects.</h2>
           </Row>
           <Row className="my-5 portfolio_card-lg">
-            <Col>
+            <Col md={6}>
+              <GatsbyImage image={getImage(data.podiaFeature)} alt="Illustrated application stack showing a Podia course editor above Rails application logic and a PostgreSQL database" />
+            </Col>
+            <Col md={6}>
               <h3>Podia</h3>
               <p>
                 At <a href="https://www.podia.com/" target="_blank" rel="noopener noreferrer" className="link-animate">Podia</a>, I worked on a mature Rails monolith, building new product features and improving
@@ -86,10 +87,10 @@ const IndexPage = ({ data }) => {
             </Col>
           </Row>
           <Row className="my-5 portfolio_card-lg">
-            <Col md={6}>
+            <Col xs={{span: 12, order: 1}} md={{span: 6, order: 2}}>
             <GatsbyImage image={getImage(data.sjcPlatform)} alt="Homepage from St. Jude Cloud Genomics Platform" />
             </Col>
-            <Col>
+            <Col xs={{span: 12, order: 2}} md={{span: 6, order: 1}}>
               <h3>St. Jude Cloud</h3>
               <p>
                 I was a UI/UX designer and web developer for the St. Jude Cloud website, <a href="https://stjude.cloud" target="_blank" rel="noopener noreferrer" className="link-animate">stjude.cloud</a>.
@@ -100,7 +101,7 @@ const IndexPage = ({ data }) => {
             </Col>
           </Row>
           <Row className="my-5 portfolio_card-lg">
-            <Col xs={{span: 12, order: 2}} md={{span: 6, order: 1}}>
+            <Col xs={{span: 12, order: 2}} md={{span: 6, order: 2}}>
               <h3>Mercer Capital</h3>
               <p>
                 I was a senior graphic designer and marketing associate for <a href="https://mercercapital.com" target="_blank" rel="noopener noreferrer" className="link-animate">Mercer Capital</a>, 
@@ -111,7 +112,7 @@ const IndexPage = ({ data }) => {
               </p>
               <Button as={Link} to='portfolio/mercer-capital'>Learn More</Button>
             </Col>
-            <Col xs={{span: 12, order: 1}} md={{span: 6, order: 2}}>
+            <Col xs={{span: 12, order: 1}} md={{span: 6, order: 1}}>
             <GatsbyImage image={getImage(data.mercerNewsletters)} alt="Mercer Capital Newsletters" />
             </Col>
           </Row>
@@ -147,9 +148,6 @@ const IndexPage = ({ data }) => {
             <Col md={5} lg={4} className="get-in-touch">
               <div className="d-flex flex-column align-items-start">
               <h2>Get in Touch.</h2>
-              <Button className="btn_email" href="mailto:stephawiggins@gmail.com">
-              Email Me
-            </Button>
             </div>
             <div className="mt-3">
             <Button
@@ -195,6 +193,11 @@ export const query = graphql`
       }
     }
     trees: file(relativePath: { eq: "trees.png" }) {
+      childImageSharp {
+        gatsbyImageData(width: 700, placeholder: NONE, layout: CONSTRAINED)
+      }
+    }
+    podiaFeature: file(relativePath: { eq: "podia_feature.png" }) {
       childImageSharp {
         gatsbyImageData(width: 700, placeholder: NONE, layout: CONSTRAINED)
       }

@@ -23,9 +23,6 @@ const Footer = () => {
             <h2>Get in Touch.</h2>
           </Col>
           <Col md={8} lg={7} xl={5} className="d-flex">
-            <Button variant="secondary" className="btn_email" href="mailto:stephawiggins@gmail.com">
-              Email Me
-            </Button>
             <Button
                 variant="secondary"
                 target="_blank"
