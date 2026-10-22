@@ -34,7 +34,7 @@ const IndexPage = ({ data }) => {
                 <br />
                 Stephanie Wiggins.
               </h1>
-              <h5 className="mt-3">ux/ui designer &nbsp;&nbsp; &#38;&#38; &nbsp;&nbsp; web developer</h5>
+              <h5 className="mt-3">rails dev &#38;&#38; design background</h5>
             </Col>
             <Col xs={{span: 12, order: 1}} md={{span: 6, order: 2}}>
               <GatsbyImage image={getImage(data.stephanieFeature)} alt="Stephanie Wiggins" />
@@ -51,13 +51,13 @@ const IndexPage = ({ data }) => {
             <Col md={6}>
               <h2>Analytical yet Creative.</h2>
               <p>
-                With graphic design, marketing, and web development skills, I weave my expertise 
-                with a project’s initiatives to create a user-centric, cohesive experience. 
-                I aim to create projects that are both beautiful and enjoyable to use. 
+                With a background in design and marketing, I bring a product-centric focus to my work as a Rails developer.
+                I build features across the stack — translating product needs into technical decisions, from designing how
+                the data is structured and building the application logic to polishing the user interface.
               </p>
               <p>
-                Using my well-rounded experience in UI design and development, I enjoy helping users discover valuable content in informative articles and navigate through complex applications. Afterwards, I cull data and analyze to understand
-                how an article or app is performing and how to enhance the next user's experience. 
+                I'm excited about how AI is changing what's possible in product development, creating new opportunities
+                to experiment, iterate quickly, and bring ideas to life.
               </p>
               <Button href={Resume}>Download My Resume</Button>
             </Col>
@@ -70,15 +70,31 @@ const IndexPage = ({ data }) => {
             <h2>Projects.</h2>
           </Row>
           <Row className="my-5 portfolio_card-lg">
+            <Col>
+              <h3>Podia</h3>
+              <p>
+                At <a href="https://www.podia.com/" target="_blank" rel="noopener noreferrer" className="link-animate">Podia</a>, I worked on a mature Rails monolith, building new product features and improving
+                the systems behind them. My work spanned the app, including a blog platform, course and quiz editors,
+                and community features, along with database architecture, complex data migrations, query optimization,
+                and performance improvements.
+              </p>
+              <p>
+                Working across Rails, Hotwire (Turbo), PostgreSQL, and React, I combined hands-on development with
+                clear communication and project coordination to bring features from concept through implementation,
+                while maintaining and improving an application with years of existing customer data.
+              </p>
+            </Col>
+          </Row>
+          <Row className="my-5 portfolio_card-lg">
             <Col md={6}>
             <GatsbyImage image={getImage(data.sjcPlatform)} alt="Homepage from St. Jude Cloud Genomics Platform" />
             </Col>
             <Col>
               <h3>St. Jude Cloud</h3>
               <p>
-                I am a UI/UX designer and web developer for the St. Jude Cloud website, <a href="https://stjude.cloud" target="_blank" rel="noopener noreferrer" className="link-animate">stjude.cloud</a>. 
-                Specifically, I focus on the <a href="https://platform.stjude.cloud" target="_blank" rel="noopener noreferrer" className="link-animate">Genomics Platform</a>, a ReactJS/Ruby on Rails application 
-                that shares raw genomics data and analysis tools with scientists globally.
+                I was a UI/UX designer and web developer for the St. Jude Cloud website, <a href="https://stjude.cloud" target="_blank" rel="noopener noreferrer" className="link-animate">stjude.cloud</a>.
+                Specifically, I focused on the <a href="https://platform.stjude.cloud" target="_blank" rel="noopener noreferrer" className="link-animate">Genomics Platform</a>, a ReactJS/Ruby on Rails application
+                that shared raw genomics data and analysis tools with scientists globally.
               </p>
               <Button as={Link} to='portfolio/stjude-cloud'>Learn More</Button>
             </Col>
