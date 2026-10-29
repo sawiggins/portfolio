@@ -87,3 +87,30 @@ $yellow: #E59500;
     }
   }
 }
+
+.rotating-intro-phrases {
+  display: inline-grid;
+  vertical-align: top;
+  max-width: 100%;
+
+  > span {
+    grid-area: 1 / 1;
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  > .is-active {
+    visibility: visible;
+    opacity: 1;
+    animation: intro-phrase-in 450ms ease-out;
+  }
+}
+
+@keyframes intro-phrase-in {
+  from { opacity: 0; transform: translateY(0.25em); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .rotating-intro-phrases > .is-active { animation: none; }
+}

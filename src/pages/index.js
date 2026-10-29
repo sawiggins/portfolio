@@ -7,6 +7,7 @@ import { library } from "@fortawesome/fontawesome-svg-core";
 import { fab, faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
 
 import SiteNav from '../components/nav.js'
+import RotatingIntro from '../components/rotating-intro'
 
 import HomerSign from '../images/homer_yard-sign-home.png'
 import MSCAWebsite from '../images/msca_website-homepage.png'
@@ -33,7 +34,7 @@ const IndexPage = ({ data }) => {
                 <br />
                 Stephanie Wiggins.
               </h1>
-              <h5 className="mt-3">rails dev &#38;&#38; design background</h5>
+              <RotatingIntro />
             </Col>
             <Col xs={{span: 12, order: 1}} md={{span: 6, order: 2}}>
               <GatsbyImage image={getImage(data.stephanieFeature)} alt="Stephanie Wiggins" />
