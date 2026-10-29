@@ -116,7 +116,7 @@ const IndexPage = ({ data }) => {
             <GatsbyImage image={getImage(data.mercerNewsletters)} alt="Mercer Capital Newsletters" />
             </Col>
           </Row>
-          <Row className="section"><Col md={4} className="portfolio_card-sm"><img src="/projects/global-friends-globe.png" alt="Global Friends Memphis website displayed on a laptop beside a globe"/><h3>Global Friends</h3><Button as={Link} to="/portfolio/global-friends">Learn More</Button></Col></Row>
+<Row className="section"><Col md={4} className="portfolio_card-sm"><img src="/projects/railsdevs-desktop.png" alt="RailsDevs website displayed on a desktop computer on a light wood desk"/><h3>RailsDevs</h3><Button as={Link} to="/portfolio/railsdevs">Learn More</Button></Col><Col md={4} className="portfolio_card-sm"><img src="/projects/global-friends-globe.png" alt="Global Friends Memphis website displayed on a laptop beside a globe"/><h3>Global Friends</h3><Button as={Link} to="/portfolio/global-friends">Learn More</Button></Col></Row>
           <Row className="section">
             <Col md={4} className="portfolio_card-sm">
               {/* <GatsbyImage image={getImage(data.homerYardSign)} alt="Homer Real Estate Yard Sign" /> */}
