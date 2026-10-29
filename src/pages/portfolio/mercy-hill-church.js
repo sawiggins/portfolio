@@ -37,7 +37,7 @@ const MercyHill = ({ data }) => {
       </Container>
       <Container>
       <Row className='my-5'>
-          <Col lg={{span:10, offset: 1}}>
+          <Col lg={{span:10, offset: 1}} className="text-center">
             <GatsbyImage image={getImage(data.MercyHillBanner)} alt="Mercy Hill Yard Banner" />
           </Col>
         </Row>

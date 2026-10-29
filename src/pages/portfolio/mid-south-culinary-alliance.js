@@ -35,7 +35,7 @@ const MSCA = ({ data }) => {
       </Container>
       <Container>
       <Row className='my-5'>
-          <Col>
+          <Col className="text-center">
             <GatsbyImage image={getImage(data.MSCAStylescape)} alt="MSCA Style Guide" />
           </Col>
         </Row>
@@ -49,7 +49,7 @@ const MSCA = ({ data }) => {
           </Col>
         </Row>
         <Row className='my-5'>
-          <Col>
+          <Col className="text-center">
             <GatsbyImage image={getImage(data.MSCAWebsite)} alt="MSCA Website" />
           </Col>
         </Row>

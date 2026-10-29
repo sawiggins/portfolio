@@ -18,11 +18,11 @@ const Footer = () => {
   return (
     <Container fluid className="footer py-5">
       <Container>
-        <Row>
-          <Col md={4} lg={5} xl={{offset: 1, span: 5}}>
+        <Row className="align-items-center footer__row">
+          <Col xs="auto">
             <h2>Get in Touch.</h2>
           </Col>
-          <Col md={8} lg={7} xl={5} className="d-flex">
+          <Col xs="auto" className="d-flex gap-2 gap-md-4 justify-content-center footer__icons">
             <Button
                 variant="secondary"
                 target="_blank"
