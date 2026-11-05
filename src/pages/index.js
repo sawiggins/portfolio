@@ -42,8 +42,7 @@ const IndexPage = ({ data }) => {
           </Row>
         </Container>
 
-        <a name="about" />
-        <Container className="section about-me">
+        <Container id="about" className="section about-me">
           <Row >
             <Col md={6} className="d-flex flex-column justify-content-center">
             <GatsbyImage image={getImage(data.trees)} alt="trees" />
@@ -63,8 +62,7 @@ const IndexPage = ({ data }) => {
           </Row>
         </Container>
 
-        <a name="portfolio" />
-        <Container className="section">
+        <Container id="portfolio" className="section">
           <Row>
             <h2>Projects.</h2>
           </Row>
@@ -98,7 +96,7 @@ const IndexPage = ({ data }) => {
                 Specifically, I focused on the <a href="https://platform.stjude.cloud" target="_blank" rel="noopener noreferrer" className="link-animate">Genomics Platform</a>, a ReactJS/Ruby on Rails application
                 that shared raw genomics data and analysis tools with scientists globally.
               </p>
-              <Button as={Link} to='portfolio/stjude-cloud'>Learn More</Button>
+              <Button as={Link} to='portfolio/stjude-cloud'>Learn More<span className="visually-hidden"> about St. Jude Cloud</span></Button>
             </Col>
           </Row>
           <Row className="my-5 portfolio_card-lg">
@@ -111,38 +109,37 @@ const IndexPage = ({ data }) => {
                 marketing process – from initial research and content creation to distribution and 
                 post-production analysis.
               </p>
-              <Button as={Link} to='portfolio/mercer-capital'>Learn More</Button>
+              <Button as={Link} to='portfolio/mercer-capital'>Learn More<span className="visually-hidden"> about Mercer Capital</span></Button>
             </Col>
             <Col xs={{span: 12, order: 1}} md={{span: 6, order: 1}}>
             <GatsbyImage image={getImage(data.mercerNewsletters)} alt="Mercer Capital Newsletters" />
             </Col>
           </Row>
-<Row className="section"><Col md={4} className="portfolio_card-sm"><img src="/projects/railsdevs-desktop.png" alt="RailsDevs website displayed on a desktop computer on a light wood desk"/><h3>RailsDevs</h3><Button as={Link} to="/portfolio/railsdevs">Learn More</Button></Col><Col md={4} className="portfolio_card-sm"><img src="/projects/fcar-laptop.png" alt="Adoption application concept on a laptop beside a dog"/><h3>Fayette County Animal Rescue</h3><Button as={Link} to="/portfolio/fayette-county-animal-rescue">Learn More</Button></Col><Col md={4} className="portfolio_card-sm"><img src="/projects/global-friends-globe.png" alt="Global Friends Memphis website displayed on a laptop beside a globe"/><h3>Global Friends</h3><Button as={Link} to="/portfolio/global-friends">Learn More</Button></Col></Row>
+<Row className="section"><Col md={4} className="portfolio_card-sm"><img src="/projects/railsdevs-desktop.png" alt="RailsDevs website displayed on a desktop computer on a light wood desk"/><h3>RailsDevs</h3><Button as={Link} to="/portfolio/railsdevs">Learn More<span className="visually-hidden"> about RailsDevs</span></Button></Col><Col md={4} className="portfolio_card-sm"><img src="/projects/fcar-laptop.png" alt="Adoption application concept on a laptop beside a dog"/><h3>Fayette County Animal Rescue</h3><Button as={Link} to="/portfolio/fayette-county-animal-rescue">Learn More<span className="visually-hidden"> about Fayette County Animal Rescue</span></Button></Col><Col md={4} className="portfolio_card-sm"><img src="/projects/global-friends-globe.png" alt="Global Friends Memphis website displayed on a laptop beside a globe"/><h3>Global Friends</h3><Button as={Link} to="/portfolio/global-friends">Learn More<span className="visually-hidden"> about Global Friends</span></Button></Col></Row>
           <Row className="section">
             <Col md={4} className="portfolio_card-sm">
               {/* <GatsbyImage image={getImage(data.homerYardSign)} alt="Homer Real Estate Yard Sign" /> */}
               <img src={HomerSign} alt="Homer Real Estate Yard Sign" /> 
               <h3>Homer Real Estate</h3>
-              <Button as={Link} to='portfolio/homer-real-estate'>Learn More</Button>
+              <Button as={Link} to='portfolio/homer-real-estate'>Learn More<span className="visually-hidden"> about Homer Real Estate</span></Button>
             </Col>
             <Col md={4} className="portfolio_card-sm">
               {/* <GatsbyImage image={getImage(data.mscaHomepage)} alt="Mid-South Culinary Alliance Homepage" /> */}
               <img src={MSCAWebsite} alt="Mid-South Culinary Alliance Homepage" /> 
               <h3>Mid-South Culinary Alliance</h3>
-              <Button as={Link} to='portfolio/mid-south-culinary-alliance'>Learn More</Button>
+              <Button as={Link} to='portfolio/mid-south-culinary-alliance'>Learn More<span className="visually-hidden"> about Mid-South Culinary Alliance</span></Button>
             </Col>
             <Col md={4} className="portfolio_card-sm">
               {/* <GatsbyImage image={getImage(data.mercyHillBanner)} alt="Mercy Hill Banner" /> */}
               <img src={MercyHillBanner} alt="Mercy Hill Banner" /> 
               <h3>Mercy Hill Church</h3>
-              <Button as={Link} to='portfolio/mercy-hill-church'>Learn More</Button>
+              <Button as={Link} to='portfolio/mercy-hill-church'>Learn More<span className="visually-hidden"> about Mercy Hill Church</span></Button>
             </Col>
           </Row>
         </Container>
 
         
-        <Container className="section">
-        <a name="contact" />
+        <Container id="contact" className="section">
           <Row>
             <Col md={6}>
               <GatsbyImage image={getImage(data.getInTouch)} alt="Cup of Coffee" />
@@ -222,4 +219,10 @@ export const query = graphql`
   }
 `
 
-export const Head = () => <title>Stephanie Wiggins</title>
+export const Head = () => (
+  <>
+    <html lang="en" />
+    <title>Stephanie Wiggins</title>
+    <meta name="description" content="Explore Stephanie Wiggins’s portfolio of Ruby on Rails development, UX/UI design, branding, and digital projects for businesses and nonprofits." />
+  </>
+)

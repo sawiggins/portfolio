@@ -9,20 +9,13 @@ const NotFoundPage = ({ data }) => {
     <Container>
       <Row>
       <Col md={5}>
-        <GatsbyImage image={getImage(data.EmptyCoffeeCup)} alt="Church" />
+        <GatsbyImage image={getImage(data.EmptyCoffeeCup)} alt="Empty coffee cup" />
       </Col>
       <Col md={{span: 5, offset: 1}} className="d-flex flex-column justify-content-center">
         <h1>404.</h1>
         <p>
           Sorry, getting a refill to fuel more design and development.
           <br />
-          {process.env.NODE_ENV === "development" ? (
-            <>
-              <br />
-              Try creating a page in <code>src/pages/</code>.
-              <br />
-            </>
-          ) : null}
           <br />
           <Link to="/" className="link-animate">Go home</Link>.
         </p>
@@ -45,4 +38,10 @@ export const query = graphql`
   }
 `
 
-export const Head = () => <title>Not found</title>
+export const Head = () => (
+  <>
+    <html lang="en" />
+    <title>Not found</title>
+    <meta name="description" content="This page could not be found. Explore Stephanie Wiggins’s portfolio of web development, UX/UI design, and branding projects." />
+  </>
+)

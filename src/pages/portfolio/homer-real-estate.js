@@ -23,7 +23,7 @@ const HomerRealEstate = ({ data }) => {
           </Col>
           <Col md={6}>
             <h2 className="mb-2">The Brief.</h2>
-            <h5 className="mb-4">branding&nbsp;&nbsp;•&nbsp;&nbsp;logo&nbsp;&nbsp;•&nbsp;&nbsp;collateral</h5>
+            <p className="h5 mb-4">branding&nbsp;&nbsp;•&nbsp;&nbsp;logo&nbsp;&nbsp;•&nbsp;&nbsp;collateral</p>
             <p>
               The client was considering launching a new real estate company and wanted some basic graphics to user test. As a real estate expert, he looked to differentiate his business in a sea of headshots. His idea was instead to feature his dachshund, Homer. Additionally, he would intentionally engage with local pet rescues in order to connect with clients who also had a heart for animals. 
             </p>
@@ -77,4 +77,10 @@ export const query = graphql`
   }
 `
 
-export const Head = () => <title>Stephanie Wiggins | Homer Real Estate</title>
+export const Head = () => (
+  <>
+    <html lang="en" />
+    <title>Stephanie Wiggins | Homer Real Estate</title>
+    <meta name="description" content="Explore Stephanie Wiggins’s branding, logo design, and marketing collateral for Homer Real Estate." />
+  </>
+)

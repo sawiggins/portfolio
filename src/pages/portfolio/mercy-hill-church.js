@@ -25,7 +25,7 @@ const MercyHill = ({ data }) => {
           </Col>
           <Col md={6}>
             <h2 className="mb-2">The Brief.</h2>
-            <h5 className="mb-4">print and digital collateral</h5>
+            <p className="h5 mb-4">print and digital collateral</p>
             <p>
               After a fine arts jack of all trades staff member moved, Mercy Hill Church needed help with some print and digital collateral material. 
             </p>
@@ -84,4 +84,10 @@ export const query = graphql`
   }
 `
 
-export const Head = () => <title>Stephanie Wiggins | Mercy Hill Church</title>
+export const Head = () => (
+  <>
+    <html lang="en" />
+    <title>Stephanie Wiggins | Mercy Hill Church</title>
+    <meta name="description" content="Explore Stephanie Wiggins’s print and digital design work for Mercy Hill Church, including banners, postcards, and seasonal materials." />
+  </>
+)

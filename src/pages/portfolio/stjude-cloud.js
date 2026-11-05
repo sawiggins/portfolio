@@ -23,7 +23,7 @@ const StJudeCloud = ({ data }) => {
           </Col>
           <Col md={6}>
             <h2 className="mb-2">The Brief.</h2>
-            <h5 className="mb-4">UX/UI design&nbsp;&nbsp;•&nbsp;&nbsp; web development</h5>
+            <p className="h5 mb-4">UX/UI design&nbsp;&nbsp;•&nbsp;&nbsp; web development</p>
             <p>
               Brought on to the project's web development team as the first to double as a UX/UI designer,  I seek to bring a level of polish and ease to a complex ecosystem that inherently begets complex user interfaces. Specifically, I focus on the site's <a href="https://platform.stjude.cloud" target="_blank" rel="noopener noreferrer" className="link-animate">Genomics Platform</a> app which shares genomics data and analysis workflows with researchers. 
             </p>
@@ -42,7 +42,7 @@ const StJudeCloud = ({ data }) => {
         </Row>
         <Row className="">
           <Col md={4}>
-            <h6>FEATURED PROJECT</h6>
+            <p className="h6">FEATURED PROJECT</p>
             <h2>Data Access Agreement Wizard</h2>
           </Col>
           <Col md={8}>
@@ -99,4 +99,10 @@ export const query = graphql`
   }
 `
 
-export const Head = () => <title>Stephanie Wiggins | St. Jude Cloud</title>
+export const Head = () => (
+  <>
+    <html lang="en" />
+    <title>Stephanie Wiggins | St. Jude Cloud</title>
+    <meta name="description" content="Explore Stephanie Wiggins’s UX/UI design and web development for St. Jude Cloud, including the Genomics Platform and Data Access Agreement Wizard." />
+  </>
+)

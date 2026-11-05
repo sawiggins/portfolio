@@ -23,7 +23,7 @@ const MercerCapital = ({ data }) => {
           </Col>
           <Col md={6}>
             <h2 className="mb-2">The Brief.</h2>
-            <h5 className="mb-4">design&nbsp;&nbsp;•&nbsp;&nbsp;content marketing&nbsp;&nbsp;•&nbsp;&nbsp;salesforce</h5>
+            <p className="h5 mb-4">design&nbsp;&nbsp;•&nbsp;&nbsp;content marketing&nbsp;&nbsp;•&nbsp;&nbsp;salesforce</p>
             <p>
               Working as a designer and marketing associate for <a href="https://mercercapital.com" target="_blank" rel="noopener noreferrer" className="link-animate">Mercer Capital</a>  meant I spent the majority of time in and around the blizzard of content the firm produced. Since the firm produced three weekly blogs, more than a dozen quarterly newsletters, and regular whitepapers, I became involved in the entire content marketing process. While the aim was to get content from the analysts out the door, efficiency and targeting were key. Thus, I templatized my documents, performed initial keyword research, and analyzed KPIs after the campaign. 
             </p>
@@ -42,7 +42,7 @@ const MercerCapital = ({ data }) => {
         </Row>
         <Row>
         <Col md={4}>
-            <h6>FEATURED PROJECT</h6>
+            <p className="h6">FEATURED PROJECT</p>
             <h2>Family Business Director Book &amp; Blog</h2>
           </Col>
           <Col md={8}>
@@ -108,4 +108,10 @@ export const query = graphql`
   }
 `
 
-export const Head = () => <title>Stephanie Wiggins | Mercer Capital</title>
+export const Head = () => (
+  <>
+    <html lang="en" />
+    <title>Stephanie Wiggins | Mercer Capital</title>
+    <meta name="description" content="Explore Stephanie Wiggins’s design and content marketing work for Mercer Capital, including newsletters and the Family Business Director book and blog." />
+  </>
+)

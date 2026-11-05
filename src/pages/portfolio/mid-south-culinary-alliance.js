@@ -23,7 +23,7 @@ const MSCA = ({ data }) => {
           </Col>
           <Col md={6}>
             <h2 className="mb-2">The Brief.</h2>
-            <h5 className="mb-4">branding&nbsp;&nbsp;•&nbsp;&nbsp;logo&nbsp;&nbsp;•&nbsp;&nbsp;website</h5>
+            <p className="h5 mb-4">branding&nbsp;&nbsp;•&nbsp;&nbsp;logo&nbsp;&nbsp;•&nbsp;&nbsp;website</p>
             <p>
             In February 2020, I volunteered with AIGA’s Design for Good in order to provide a styleguide, logo, and mock-ups to be used later that month at <a href="https://www.givecampmemphis.org/" target="_blank" rel="noopener noreferrer" className="link-animate">GiveCamp Memphis</a>. At GiveCamp our team built out a website, a Salesforce org, and learning management system for the nonprofit. 
             </p>
@@ -98,4 +98,10 @@ export const query = graphql`
   }
 `
 
-export const Head = () => <title>Stephanie Wiggins | Mid-South Culinary Alliance</title>
+export const Head = () => (
+  <>
+    <html lang="en" />
+    <title>Stephanie Wiggins | Mid-South Culinary Alliance</title>
+    <meta name="description" content="Explore Stephanie Wiggins’s branding, logo design, and website work for Mid-South Culinary Alliance." />
+  </>
+)

@@ -28,7 +28,7 @@ export default function RotatingIntro() {
   }, [])
 
   return (
-    <h5 className="mt-3 rotating-intro">
+    <p className="h5 mt-3 rotating-intro">
       <span className="visually-hidden">rails dev &amp;&amp; {phrases.join(", ")}</span>
       <span aria-hidden="true">rails dev &amp;&amp; </span>
       <span className="rotating-intro-phrases" aria-hidden="true">
@@ -36,6 +36,6 @@ export default function RotatingIntro() {
           <span key={phrase} className={index === active ? "is-active" : ""}>{phrase}</span>
         ))}
       </span>
-    </h5>
+    </p>
   )
 }
